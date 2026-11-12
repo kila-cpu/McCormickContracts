@@ -45,3 +45,17 @@ or without Node: `python3 -m http.server 3000 --directory public`
 - PDFs, emails, SMS and push reminders show a toast describing what would happen. CSV exports are real.
 - Data lives in the browser tab and resets on reload (or Me → Reset demo data).
 - Logo artwork supplied by McCormick Contracts (`public/logo.png`).
+
+## Mobile app layout
+
+The site app follows the standard mobile wireframes used for every demo:
+- **Home:** red header with the user's initials, a greeting and the live time. Below it are Clock In / Clock Out, Switch (update the timesheet's job, site or machine) and Quick Access cards. Agg Loads stays locked ("Checklist first") until a driver submits today's vehicle checklist.
+- **Bottom tabs:** Checklist / Home / Profile.
+- **Vehicle and Plant Checklist:**
+  - The list shows this week's submissions, with search, View PDF and "+ New Checklist".
+  - The form has an Item / Checked / Remark table, NIL Defects, Select All, Photos (0/6) and Add Signature.
+- **Job Cards:**
+  - The list has search, status and type filters.
+  - Create New Job Card opens a type sheet (Vehicle / Plant / Tyre), then a 3-step Details → Time (live timer and parts) → Confirm form.
+- **Profile:** the Employee Record, plus each certificate with Choose file and an expiry date.
+

@@ -45,7 +45,7 @@ button{cursor:pointer}
 .i-ok{color:var(--green)} .i-bad{color:var(--red)}
 .ricon .i{width:20px;height:20px;color:var(--ink)}
 .tilebtn .ti .i{width:24px;height:24px;color:var(--brand)}
-.tabbar span .i{width:22px;height:22px}
+.tabbar span .i{width:26px;height:26px}
 .landcard .ic .i{width:24px;height:24px;color:var(--hv)}
 .nav .ni .i{width:18px;height:18px}
 .att .ai .i{width:19px;height:19px;color:var(--ink-2)}
@@ -118,20 +118,21 @@ button{cursor:pointer}
 .phone{position:relative;width:390px;height:844px;flex:0 0 390px;background:linear-gradient(160deg,#454a58,#2a2e38 26%,#1c1f27);border-radius:56px;padding:11px;
   box-shadow:0 2px 0 rgba(255,255,255,.09) inset,0 44px 90px -22px rgba(0,0,0,.85),0 0 0 1px rgba(0,0,0,.5);transform-origin:top center}
 .screen{position:relative;width:100%;height:100%;border-radius:46px;overflow:hidden;background:var(--bg);display:flex;flex-direction:column}
-.statusbar{height:46px;flex:0 0 46px;display:flex;align-items:center;padding:0 30px 0 34px;background:var(--card);color:var(--ink);font-size:14px;font-weight:650;z-index:3}
-.statusbar.dark{background:var(--brand);color:#fff}
+.statusbar{height:46px;flex:0 0 46px;display:flex;align-items:center;padding:0 30px 0 34px;background:var(--brand);color:#161616;font-size:14px;font-weight:650;z-index:3}
+.statusbar.dark{background:#111c2b;color:#161616}
 .statusbar .sp{flex:1}
 .island{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:108px;height:31px;background:#000;border-radius:20px;z-index:5}
 .homebar{height:22px;flex:0 0 22px;background:var(--card);display:grid;place-items:center;z-index:3}
 .homebar i{display:block;width:136px;height:5px;border-radius:5px;background:rgba(0,0,0,.25)}
+.screen:has(.login) .homebar{background:#111c2b}.screen:has(.login) .homebar i{background:rgba(255,255,255,.35)}
 #m-root{position:relative;flex:1;min-height:0;overflow:hidden;color:var(--ink);font:15px/1.5 var(--sans)}
 
 /* ═══ Phone app ═════════════════════════════════════════════════════════ */
 .app{height:100%;display:flex;flex-direction:column;position:relative;background:var(--bg)}
-.mtop{display:flex;align-items:center;gap:8px;padding:6px 12px 10px;background:var(--card);border-bottom:1px solid var(--line);min-height:52px}
-.mtop h1{font-size:17px;margin:0;flex:1;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mtop .back{width:36px;height:36px;border-radius:50%;border:0;background:var(--grey-soft);display:grid;place-items:center;font-size:18px}
-.mtop .act{border:0;background:none;color:var(--brand);font-weight:700;font-size:14px}
+.mtop{display:grid;grid-template-columns:52px 1fr 52px;align-items:center;padding:10px 14px;background:#fff;border-bottom:1px solid #d9d9d9;min-height:64px}
+.mtop h1{font-size:18px;font-weight:750;text-align:center;margin:0;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mtop .back{width:42px;height:42px;border-radius:50%;border:0;background:var(--brand);color:#fff;display:grid;place-items:center}.mtop .back .i{width:20px;height:20px}
+.mtop .act{border:0;background:none;color:var(--brand);font-weight:700;font-size:13px;justify-self:end;white-space:nowrap}
 .mscroll{flex:1;min-height:0;overflow-y:auto;padding:14px 14px 96px;scrollbar-width:none}
 .mscroll::-webkit-scrollbar{display:none}
 .hero{background:linear-gradient(160deg,var(--brand) 0%,var(--brand-2) 100%);color:#fff;padding:4px 18px 18px;margin:-14px -14px 14px;border-bottom:5px solid var(--hv)}
@@ -164,8 +165,8 @@ button{cursor:pointer}
 .row .ricon{width:38px;height:38px;border-radius:10px;background:var(--navy-soft);display:grid;place-items:center;font-size:18px;flex:0 0 auto}
 .row .chev{color:var(--ink-3)}
 .empty{padding:22px;text-align:center;color:var(--ink-3);font-size:13.5px}
-.tabbar{position:absolute;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);display:flex;justify-content:center;padding:6px 4px 4px;z-index:4}
-.tabbar button{flex:1;max-width:96px;border:0;background:none;display:flex;flex-direction:column;align-items:center;gap:1px;font-size:10.5px;color:var(--ink-3);font-weight:650;padding:4px 0}
+.tabbar{position:absolute;left:0;right:0;bottom:0;height:64px;background:#fff;border-top:1px solid #e3e3e3;display:flex;justify-content:center;padding:7px 4px 6px;z-index:4}
+.tabbar button{flex:1;max-width:140px;border:0;background:none;display:flex;flex-direction:column;align-items:center;gap:1px;font-size:10.5px;color:var(--ink-3);font-weight:650;padding:4px 0}
 .tabbar button span{font-size:19px;opacity:.55}
 .tabbar button.on{color:var(--brand)}
 .tabbar button.on span{opacity:1}
@@ -178,8 +179,8 @@ button{cursor:pointer}
 .btnrow{display:flex;gap:8px}
 .btnrow>*{flex:1}
 .fld{display:block;margin-bottom:12px}
-.fld>span{display:block;font-size:12.5px;font-weight:700;color:var(--ink-2);margin-bottom:5px}
-.fld input,.fld select,.fld textarea{width:100%;border:1px solid var(--line-2);border-radius:10px;padding:11px 12px;background:#fff;font-size:15px}
+.fld>span{display:block;font-size:14.5px;font-weight:500;color:var(--ink);margin-bottom:7px}
+.fld input,.fld select,.fld textarea{width:100%;border:1.5px solid #e3e4e7;border-radius:12px;padding:12px 14px;background:#fff;font-size:15px}
 .fld textarea{min-height:76px;resize:vertical}
 .allmods{display:flex;justify-content:space-between;align-items:center;width:100%;margin:14px 0 10px;padding:11px 14px;border:1px dashed var(--line-2);border-radius:12px;background:none;font-weight:700;font-size:13.5px;color:var(--ink-2)}
 .lsum{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:6px}
@@ -192,11 +193,11 @@ button{cursor:pointer}
 .lroute{display:flex;flex-direction:column;gap:3px;font-size:12.5px;color:var(--ink-2);border-left:2px dotted var(--line-2);margin-left:5px;padding-left:10px}
 .lroute span{display:flex;align-items:center;gap:7px;margin-left:-16px}.lroute .dot{width:9px;height:9px;border:2px solid #fff;box-shadow:0 0 0 1px var(--line-2)}
 .lc3{display:flex;gap:10px;align-items:center;font-size:11.5px;color:var(--ink-3)}.lc3 .bdg{margin-left:auto}
-.ldock{position:absolute;left:12px;right:12px;bottom:74px;z-index:3;display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:8px;align-items:end;background:rgba(15,15,15,.94);border-radius:18px;padding:8px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.ldock{position:absolute;left:12px;right:12px;bottom:76px;z-index:3;display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:8px;align-items:end;background:var(--brand);border-radius:18px;padding:8px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
 .ldock button{border:0;background:none;color:#fff;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:12px;font-weight:700;padding:6px 0}
 .ldock button .i{width:22px;height:22px}
 .ldock button.big{background:var(--hv);color:var(--navy);border-radius:13px;padding:10px 0;font-size:13px}
-.ldock em{font-style:normal;background:var(--mred);border-radius:10px;padding:0 6px;font-size:11px}
+.ldock em{font-style:normal;background:var(--hv);color:#161616;border-radius:10px;padding:0 6px;font-size:11px}
 .lchoose{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .lchoose button{border:1.5px solid var(--line-2);background:#fff;border-radius:14px;padding:14px 12px;text-align:left;display:flex;flex-direction:column;gap:5px}
 .lchoose button .i{width:28px;height:28px;background:var(--hv);border-radius:10px;padding:6px;box-sizing:content-box;color:var(--navy)}
@@ -294,7 +295,17 @@ label.fab{cursor:pointer}
 .banner.bad{background:var(--red-soft);color:#9b1c16}
 .banner.ok{background:var(--green-soft);color:#0b6a42}
 .banner.info{background:var(--blue-soft);color:#1b4bb0}
-.login{height:100%;overflow-y:auto;background:linear-gradient(170deg,var(--brand) 0%,var(--brand-2) 100%);color:#fff;padding:30px 20px;scrollbar-width:none}
+.login{height:100%;overflow-y:auto;background:#111c2b;color:#fff;padding:70px 26px 30px;scrollbar-width:none;display:flex;flex-direction:column;align-items:stretch}
+.lgcircle{width:204px;height:204px;border-radius:50%;background:#fff;display:grid;place-items:center;margin:0 auto 60px;padding:26px;box-sizing:border-box}
+.lgcircle img{width:100%;height:auto;display:block}
+.lgpanel{background:#2d3848;border:1px solid #3d4757;border-radius:12px;padding:20px 20px;display:flex;flex-direction:column;gap:14px}
+.lgf{width:100%;height:48px;border:0;border-radius:10px;background:#636776;color:#fff;font-size:15px;padding:0 16px;outline:none;appearance:none;-webkit-appearance:none}
+.lgf::placeholder{color:#e2e4e9;letter-spacing:.02em}
+select.lgf{color:#e8eaee;letter-spacing:.02em}select.lgf option{color:#161616}
+.lgf:focus{box-shadow:0 0 0 2px var(--brand)}
+.lgbtn{margin-top:26px;width:100%;height:50px;border:0;border-radius:10px;background:var(--brand);color:#fff;font-size:17px;font-weight:500}
+.lghint{text-align:center;color:#8f99a8;font-size:12.5px;margin:18px 0 0}.lghint b{color:#fff}
+.lgforgot{border:0;background:none;color:#8f99a8;font-size:12.5px;text-decoration:underline;margin-top:6px}
 .login .wm{margin:16px 0 26px}
 .login h2{font-size:24px;margin:0 0 4px}
 .login p{color:#bdbdbd;margin:0 0 18px;font-size:14px}
@@ -535,10 +546,130 @@ button.kpi:hover{border-color:var(--brand)}
   .stage{padding:16px 0 80px}
   .copy{padding:0 16px}
 }
+
+/* ── Standard mobile wireframe (shared across demos) ── */
+.mhead{background:var(--brand);color:#fff;margin:-14px -14px 0;padding:14px 16px 18px}
+.mh1{display:flex;align-items:center;gap:12px}
+.mav{width:50px;height:50px;border-radius:50%;background:#fff;color:var(--brand);display:grid;place-items:center;font-weight:800;font-size:17px;flex:0 0 auto}
+.mhn{flex:1;min-width:0}.mhn b{display:block;font-size:18px;line-height:1.2;letter-spacing:-.01em}
+.mhn>span{font-size:13px;display:flex;align-items:center;gap:6px;margin-top:3px}
+.gdot{width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block}.gdot.off{background:#fecaca}
+.mhb{width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.2);color:#fff;display:grid;place-items:center;position:relative;flex:0 0 auto}
+.mhb .i{width:21px;height:21px}.mhb.sun .i{color:var(--hv)}
+.mhb .dotn{position:absolute;top:7px;right:8px;width:10px;height:10px;border-radius:50%;background:var(--hv);border:2px solid var(--brand)}
+.mh2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.mh2 button{border:0;border-radius:12px;padding:13px 10px;font-weight:750;font-size:15.5px;color:#fff;display:flex;align-items:center;justify-content:center;gap:8px}
+.mh2 .i{width:20px;height:20px}
+.mh2 .cin{background:#16a34a}.mh2 .cout{background:#6e0b12}.mh2 .csw{background:rgba(255,255,255,.24)}
+.mhjob{margin-top:10px;font-size:12.5px;opacity:.9;text-align:center}
+.qah{font-size:17px;margin:20px 2px 10px;font-weight:800}
+.qasub{font-size:13px;color:var(--ink-3);margin:-4px 2px 10px}
+.qas{display:flex;flex-direction:column;gap:10px}
+.qa{display:flex;align-items:center;gap:14px;width:100%;border:0;border-radius:16px;background:var(--brand);color:#fff;padding:14px;text-align:left;box-shadow:0 4px 12px rgba(208,26,39,.18)}
+.qa .qi{width:48px;height:48px;border-radius:12px;background:rgba(255,255,255,.18);display:grid;place-items:center;flex:0 0 auto}.qa .qi .i{width:24px;height:24px;color:#fff}
+.qa .qt{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px}.qa b{font-size:16.5px}.qa small{font-size:13px;opacity:.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.qa .qc{font-size:24px;opacity:.85;line-height:1}
+.qa .qn{background:var(--hv);color:#161616;font-size:11px;font-weight:800;border-radius:10px;padding:1px 8px}
+.qa.lock{background:#9d9d9d;box-shadow:none}.qa.lock .qi{background:none}
+.qpill{background:#1c1c1c;color:#fff;border-radius:22px;padding:9px 13px;font-size:12.5px;font-weight:750;display:flex;gap:6px;align-items:center;white-space:nowrap}.qpill .i{color:var(--hv)}
+.appver{text-align:center;color:var(--ink-3);font-size:13px;margin:16px 0 0}
+.search{display:flex;align-items:center;gap:10px;background:#fff;border:1.5px solid #e3e4e7;border-radius:14px;padding:0 14px;height:50px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.search .i{width:22px;height:22px;color:#8a8f98}
+.search input{border:0;outline:0;flex:1;font-size:15px;background:none;min-width:0;padding:0}
+.search.r{border-color:#161616}
+.wkhd{display:flex;justify-content:space-between;gap:8px;white-space:nowrap;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#7c8088;margin:18px 2px 10px}
+.wkhd span:nth-child(2){text-transform:none;letter-spacing:0;font-weight:500;font-size:12.5px}
+.subcard{background:#fff;border-radius:16px;padding:16px 16px 14px;margin-bottom:12px;box-shadow:0 1px 4px rgba(0,0,0,.06);display:flex;flex-direction:column}
+.sc1{display:flex;justify-content:space-between;align-items:center;gap:8px}.sc1 b{font-size:21px;font-weight:850;letter-spacing:-.01em}
+.scd{color:var(--ink-2);font-size:14px;margin-top:2px}
+.scw{margin-top:8px;font-size:14px;display:flex;gap:14px}.scw span{color:#8a8f98}
+.pdfbtn{align-self:flex-end;margin-top:6px;border:0;border-radius:14px;background:var(--brand);color:#fff;font-weight:700;font-size:15px;padding:11px 20px;display:flex;align-items:center;gap:8px}
+.newbar{position:absolute;left:0;right:0;bottom:64px;height:54px;border:0;background:var(--brand);color:#fff;font-size:17px;font-weight:800;z-index:3}
+.padb{height:64px}
+.infobox{display:grid;grid-template-columns:1.1fr 1fr;gap:6px 12px;background:#eef0f2;border-radius:12px;padding:14px 16px;font-size:14px;margin-bottom:16px}
+.infobox b{font-weight:600}.infobox.one{grid-template-columns:1fr;background:#f4f4f5}
+.fld .bigsel,.bigsel{border:1.5px solid #161616;background:#f4f4f4;height:52px;border-radius:12px;font-size:16px}
+.fld input[readonly]{background:#fafafa;color:var(--ink-2)}
+.ctbl{border-radius:6px 6px 0 0;overflow:hidden;background:#fff;margin-top:6px}
+.cth{display:grid;grid-template-columns:1.25fr 62px 1fr;background:var(--brand);color:#fff;font-size:13px;font-weight:600;text-align:center;padding:9px 4px}
+.ctg{background:#dcdcdc;padding:9px 12px;font-size:13.5px;color:#222}
+.ctr{display:grid;grid-template-columns:1.25fr 62px 1fr;border-bottom:1px solid #cfcfcf;min-height:54px}
+.cti{padding:8px 10px;font-size:12.5px;color:#333;border-right:1px solid #cfcfcf;display:flex;align-items:center;line-height:1.3}
+.ctc{border:0;border-right:1px solid #cfcfcf;background:none;display:grid;place-items:center;font-size:11px;font-weight:700;color:#8a8f98}
+.ctc .i{width:22px;height:22px}.ctc.ok .i{color:var(--green)}.ctc.bad{background:var(--red-soft)}.ctc.bad .i{color:var(--red)}
+.ctn{border:0;outline:0;padding:6px 8px;font-size:12.5px;text-align:center;min-width:0;background:none}
+.ctr.bad .ctn{background:#fff6f6}
+.cthint{font-size:12px;color:#8a8f98;margin:6px 2px 0}
+.nilrow{display:flex;align-items:center;gap:14px;margin:16px 0 12px;font-size:15px;border:0;background:none;padding:0}
+.nilbox{width:52px;height:40px;border:1.5px solid #8a8a8a;display:grid;place-items:center;background:#fff}
+.nilbox .i{width:24px;height:24px}.nilbox.ok .i{color:var(--green)}.nilbox.no .i{color:var(--red)}
+.selall{width:100%;border:0;border-radius:10px;background:#16a34a;color:#fff;font-weight:700;font-size:15px;padding:13px;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 3px 8px rgba(22,163,74,.25)}
+.phhd{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;margin:22px 0 10px}.phhd .i{width:22px;height:22px}
+.photo6{display:flex;gap:10px;flex-wrap:wrap}
+.photo6 img,.photo6 label{width:100px;height:100px;border-radius:14px;object-fit:cover}
+.photo6 label{background:#f1f2f4;border:1.5px solid #e2e3e6;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#8a8f98;font-size:13px;cursor:pointer}
+.photo6 label .i{width:32px;height:32px}
+.flab{font-size:15px;margin:20px 0 8px}
+.sigrow{width:100%;display:flex;align-items:center;gap:12px;background:#f7f8f9;border:1.5px solid #e2e3e6;border-radius:12px;padding:14px 16px;font-size:15px;color:var(--ink-2);text-align:left;min-height:58px}
+.sigrow .i{width:22px;height:22px;color:#333}.sigrow img{height:44px;flex:1;min-width:0;object-fit:contain;object-position:left}
+.sigrow>span:not(.chev){flex:1}
+.subbar{position:absolute;left:14px;right:14px;bottom:76px;border:0;border-radius:12px;background:var(--brand);color:#fff;font-size:17px;font-weight:600;padding:14px;z-index:3;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.pills{display:flex;gap:7px;margin-top:12px;overflow-x:auto;scrollbar-width:none}.pills::-webkit-scrollbar{display:none}
+.pill{border:1.5px solid #d6d6d6;background:#fff;border-radius:24px;padding:7px 13px;font-weight:650;font-size:13.5px;white-space:nowrap;flex:0 0 auto;display:flex;align-items:center;gap:6px}
+.pill .i{width:17px;height:17px}.pill.on{background:var(--brand);border-color:var(--brand);color:#fff}
+.bigbtn{width:100%;margin-top:14px;border:0;border-radius:14px;background:var(--brand);color:#fff;font-weight:750;font-size:16px;padding:15px;box-shadow:0 6px 14px rgba(208,26,39,.25)}
+.jcard{background:#f6f6f7;border-radius:18px;padding:16px;margin-bottom:12px;box-shadow:0 1px 4px rgba(0,0,0,.08);display:flex;flex-direction:column;cursor:pointer}
+.jc1{display:flex;align-items:center;gap:8px}.jc1 b{font-size:19px;font-weight:850}
+.jtag{display:inline-flex;align-items:center;gap:4px;border-radius:12px;padding:2px 9px;font-size:12px;font-weight:600}.jtag .i{width:14px;height:14px}
+.jtag.Vehicle{background:#e3e9fb;color:#3348a8}.jtag.Tyre{background:#fdeedd;color:#c25e10}.jtag.Plant{background:#fff3c4;color:#7a5a00}
+.jst{margin-left:auto;background:#e5e5e7;color:#555;border-radius:14px;padding:3px 12px;font-size:13px}
+.jc2{font-size:14px;color:var(--ink-2);margin-top:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.jc3{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:14px}
+.jav{width:34px;height:34px;border-radius:50%;border:2px solid #222;background:#fde9cf;color:#a55a00;display:grid;place-items:center;font-size:12px;font-weight:800}
+.jtypes{display:flex;flex-direction:column;gap:10px}
+.jtypes button{display:flex;align-items:center;gap:14px;background:#f8f9fb;border:1px solid #eceef1;border-radius:14px;padding:14px;text-align:left}
+.jti{width:46px;height:46px;border-radius:12px;background:#fff4dc;display:grid;place-items:center;flex:0 0 auto}.jti .i{color:var(--brand);width:24px;height:24px}
+.jtypes .qt{flex:1;display:flex;flex-direction:column}.jtypes b{font-size:16px}.jtypes small{color:#8a8f98;font-size:13px}
+.txtbtn{width:100%;border:0;background:none;color:#8a8f98;font-weight:600;font-size:16px;padding:8px}
+.stepband{background:var(--brand);margin:-14px -14px 12px;padding:12px 10px}
+.steps{display:grid;grid-template-columns:1fr 1fr 1fr;background:rgba(255,255,255,.22);border-radius:16px;padding:5px;gap:4px}
+.steps button{border:0;background:none;color:#fff;border-radius:12px;padding:9px 0;font-size:14px}
+.steps button.on{background:#fff;color:#161616;font-weight:750}
+.jform .fld.cap>span,.flab2{text-transform:uppercase;letter-spacing:.07em;font-size:12px;color:#7c8088;font-weight:650}
+.flab2{margin-bottom:12px}
+.tcard{text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+.jprog{background:#e3f3e6;color:#4b7a52;border-radius:20px;padding:6px 18px;font-weight:650}
+.jtimer{background:#fdf8e4;border-radius:16px;padding:18px 26px;font-size:34px;font-weight:850;font-variant-numeric:tabular-nums}
+.parts{background:#fdf9e8;border-radius:18px;padding:16px;margin-top:12px}
+.ph2{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.ph2 b{font-size:16px}.ph2 button{border:0;background:none;font-weight:750;font-size:14.5px}
+.pempty{display:flex;flex-direction:column;align-items:center;gap:2px;color:#9aa0a6;padding:12px 0 14px}.pempty .i{width:40px;height:40px}.pempty b{font-weight:500;font-size:16px}.pempty small{font-size:13px;color:#c0c4c9}
+.plist div{display:flex;align-items:center;gap:8px;background:#fff;border-radius:10px;padding:10px 12px;margin-bottom:6px}.plist span{flex:1}.plist button{border:0;background:none;color:#8a8f98}
+.pnone{display:flex;gap:8px;align-items:center;color:var(--green);font-weight:650;padding:8px 0}
+.sum .sr{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #eee;font-size:15px}.sum .sr span{color:#8a8f98}.sum .sr b{text-align:right}.sum .sr:last-child{border-bottom:0}
+.sum{margin-bottom:12px}.sum p{margin:0;font-size:15px}.gtxt{color:var(--green)}
+.mbtn.white{background:#fff;color:#161616;border:1px solid #e3e4e7}
+.mbtn.grey{background:#efefef;color:#555}
+.btn2{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%}
+.pcardm{background:#fff;border-radius:18px;padding:18px 18px 6px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.pcardm h3{margin:0 0 16px;font-size:18px;padding-bottom:10px;border-bottom:2px solid var(--brand);display:flex;justify-content:space-between;align-items:center;gap:8px}
+.pcardm .rows.flat{margin-bottom:12px}
+.filef{display:flex;border:1.5px solid #e3e4e7;border-radius:12px;overflow:hidden;cursor:pointer;background:#fff}
+.filef .fb{background:#f4f4f5;color:var(--brand);font-weight:650;padding:12px 16px;border-right:1px solid #e3e4e7;white-space:nowrap}
+.filef .fn{padding:12px 14px;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sheet{background:#fff}
+.sheet .shd{border-bottom:0;padding:24px 20px 6px;position:relative;background:#fff}
+.sheet .shd::before{content:'';position:absolute;top:9px;left:50%;width:44px;height:4px;margin-left:-22px;border-radius:3px;background:#d4d4d4}
+.sheet .shd .sht{flex:1;min-width:0}.sheet .shd h3{font-size:21px;font-weight:800}
+.sheet .shd small{display:block;color:#7c8088;font-size:14px;margin-top:2px}
+.sheet .shd button{width:40px;height:40px;display:grid;place-items:center}.sheet .shd button .i{width:18px;height:18px}
+.shline{display:block;height:3px;background:var(--brand);margin:8px 20px 4px;border-radius:2px}
+.sheet .sbody{padding:14px 20px}.sheet .sfoot{border-top:0;background:#fff;padding:8px 20px 22px}
+.sheet.center .shd{text-align:center}.sheet.center .shd button{display:none}
+.shsub{text-align:center;color:var(--ink-2);margin:0 0 16px;font-size:15.5px}
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol><symbol id="i-van" viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol><symbol id="i-digger" viewBox="0 0 24 24"><rect x="2" y="16" width="11" height="4" rx="2"/><path d="M4 16v-4h5l2 4M9 12l6-7 5 4M20 9v4l-3 1"/></symbol><symbol id="i-tyre" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v5.5M12 15.5V21M3 12h5.5M15.5 12H21"/></symbol><symbol id="i-talk" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 21l1.8-5A8 8 0 1 1 21 12z"/></symbol><symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 11h6M9 15h4"/></symbol><symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol><symbol id="i-id" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="12" r="2.5"/><path d="M14 10h5M14 14h3"/></symbol><symbol id="i-site" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-4 7 4v12M9 21v-6h6v6"/></symbol><symbol id="i-note" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol><symbol id="i-tipper" viewBox="0 0 24 24"><path d="M2 15V7l11 3v5M13 10h4l4 4v3h-4M2 15h11v2"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></symbol><symbol id="i-stop" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></symbol><symbol id="i-checked" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 12l3 3 5-6"/></symbol><symbol id="i-box" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></symbol><symbol id="i-drawing" viewBox="0 0 24 24"><path d="M3 21V3l18 18z"/><path d="M7 17v-5l5 5z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-firstaid" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M9 6V4h6v2M12 10v6M9 13h6"/></symbol><symbol id="i-cone" viewBox="0 0 24 24"><path d="M12 3l6 18H6zM8.5 13h7M4 21h16"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></symbol><symbol id="i-userplus" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6M19 8v6M16 11h6"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></symbol><symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol><symbol id="i-dash" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol><symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.5 3-5.5 7-5.5s7 2 7 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c2.4.6 4 2.4 4 5.2"/></symbol><symbol id="i-film" viewBox="0 0 24 24"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="M17 10l5-3v10l-5-3z"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol><symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></symbol><symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z" fill="currentColor"/></symbol><symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol><symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v16M5 13l7 7 7-7"/></symbol><symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V4M5 11l7-7 7 7"/></symbol><symbol id="i-signal" viewBox="0 0 24 24"><path d="M4 18v-2M9 18v-5M14 18V9M19 18V5"/></symbol><symbol id="i-battery" viewBox="0 0 24 24"><rect x="2" y="7" width="18" height="10" rx="2.5"/><path d="M22 11v2"/><rect x="4.5" y="9.5" width="12" height="5" rx="1" fill="currentColor" stroke="none"/></symbol></defs></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.2"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol><symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20a2 2 0 0 0 4 0"/></symbol><symbol id="i-switch" viewBox="0 0 24 24"><path d="M4 9h13l-3-3M20 15H7l3 3"/></symbol><symbol id="i-arrowl" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.8-4.8"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol><symbol id="i-pdf" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 13h6M9 17h4"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol><symbol id="i-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></symbol><symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></symbol><symbol id="i-dblcheck" viewBox="0 0 24 24"><path d="M2 13l4 4 8-9M10 15l2 2 10-11"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol><symbol id="i-van" viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol><symbol id="i-digger" viewBox="0 0 24 24"><rect x="2" y="16" width="11" height="4" rx="2"/><path d="M4 16v-4h5l2 4M9 12l6-7 5 4M20 9v4l-3 1"/></symbol><symbol id="i-tyre" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v5.5M12 15.5V21M3 12h5.5M15.5 12H21"/></symbol><symbol id="i-talk" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 21l1.8-5A8 8 0 1 1 21 12z"/></symbol><symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 11h6M9 15h4"/></symbol><symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol><symbol id="i-id" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="12" r="2.5"/><path d="M14 10h5M14 14h3"/></symbol><symbol id="i-site" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-4 7 4v12M9 21v-6h6v6"/></symbol><symbol id="i-note" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol><symbol id="i-tipper" viewBox="0 0 24 24"><path d="M2 15V7l11 3v5M13 10h4l4 4v3h-4M2 15h11v2"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></symbol><symbol id="i-stop" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></symbol><symbol id="i-checked" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 12l3 3 5-6"/></symbol><symbol id="i-box" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></symbol><symbol id="i-drawing" viewBox="0 0 24 24"><path d="M3 21V3l18 18z"/><path d="M7 17v-5l5 5z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-firstaid" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M9 6V4h6v2M12 10v6M9 13h6"/></symbol><symbol id="i-cone" viewBox="0 0 24 24"><path d="M12 3l6 18H6zM8.5 13h7M4 21h16"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></symbol><symbol id="i-userplus" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6M19 8v6M16 11h6"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></symbol><symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol><symbol id="i-dash" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol><symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.5 3-5.5 7-5.5s7 2 7 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c2.4.6 4 2.4 4 5.2"/></symbol><symbol id="i-film" viewBox="0 0 24 24"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="M17 10l5-3v10l-5-3z"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol><symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></symbol><symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z" fill="currentColor"/></symbol><symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol><symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v16M5 13l7 7 7-7"/></symbol><symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V4M5 11l7-7 7 7"/></symbol><symbol id="i-signal" viewBox="0 0 24 24"><path d="M4 18v-2M9 18v-5M14 18V9M19 18V5"/></symbol><symbol id="i-battery" viewBox="0 0 24 24"><rect x="2" y="7" width="18" height="10" rx="2.5"/><path d="M22 11v2"/><rect x="4.5" y="9.5" width="12" height="5" rx="1" fill="currentColor" stroke="none"/></symbol></defs></svg>
 <!-- ═══ Portal 1: landing ═══════════════════════════════════════════════ -->
 <section class="portal" id="p-land">
   <div class="land">
@@ -1012,20 +1143,23 @@ function mtoast(msg){
 // ── Sign in ────────────────────────────────────────────────────────────────
 const fieldStaff = () => S.employees.filter(e => e.role !== 'Office');
 function vLogin(){
-  const sel = M.sel && emp(M.sel), ready = !!sel;
+  const sel = M.sel && emp(M.sel);
   return `<div class="login">
-    <span class="logo lg" style="margin:14px 0 22px"><img src="logo.png" alt="McCormick Contracts"></span>
-    <h2>Sign in</h2><p>Choose your name and enter the PIN the office texted you.</p>
-    <label class="loginsel"><span>Name</span>
-      <select data-on="mSel" aria-label="Your name"><option value="">Select your name…</option>${fieldStaff().map(e => `<option value="${e.id}" ${e.id === M.sel ? 'selected' : ''}>${esc(e.name)} – ${esc(e.role)}</option>`).join('')}</select></label>
-    <div class="pinlab">PIN</div>
-    <div class="pindots ${ready ? '' : 'off'}">${[0,1,2,3].map(i => `<i class="${M.pin.length > i ? 'f' : ''}"></i>`).join('')}</div>
-    <div class="pinpad ${ready ? '' : 'off'}">${[1,2,3,4,5,6,7,8,9].map(n => `<button data-a="mPin" data-n="${n}">${n}</button>`).join('')}
-      <button data-a="mForgot" style="font-size:13px">Forgot?</button><button data-a="mPin" data-n="0">0</button><button data-a="mPinDel" aria-label="Delete">⌫</button></div>
-    <p style="text-align:center;margin-top:16px;font-size:12.5px">${sel ? `Demo PIN: ${esc(sel.pin)}` : 'Demo: pick any name, its PIN shows here'}</p>
+    <div class="lgcircle"><img src="logo.png" alt="McCormick Contracts"></div>
+    <div class="lgpanel">
+      <select class="lgf" data-on="mSel" aria-label="Select user"><option value="">SELECT USER</option>${fieldStaff().map(e => `<option value="${e.id}" ${e.id === M.sel ? 'selected' : ''}>${esc(e.name)} – ${esc(e.role)}</option>`).join('')}</select>
+      <input class="lgf" id="lpin" type="password" inputmode="numeric" maxlength="4" placeholder="PIN" value="${esc(M.pin || '')}" autocomplete="off">
+    </div>
+    <button class="lgbtn" data-a="mLogin">Login</button>
+    <p class="lghint">${sel ? `Demo PIN for ${esc(sel.name.split(' ')[0])}: <b>${esc(sel.pin)}</b>` : 'Demo: pick any user and their PIN shows here'}</p>
+    <button class="lgforgot" data-a="mForgot">Forgot PIN?</button>
   </div>`;
 }
-ON.mSel = t => { M.sel = t.value || null; M.pin = ''; renderM(); };
+ACT.mLogin = () => { const pin = ($('#lpin') || {}).value || '';
+  if (!M.sel) return mtoast('Select your name first'); if (!pin) return mtoast('Enter your PIN');
+  if (pin === emp(M.sel).pin) signIn(M.sel); else { M.pin = ''; renderM(); mtoast('Wrong PIN – try again'); } };
+document.addEventListener('keydown', ev => { if (ev.key === 'Enter' && ev.target.id === 'lpin') ACT.mLogin(); });
+ON.mSel = t => { M.sel = t.value || null; M.pin = ''; renderM(); const p = $('#lpin'); if (p && M.sel) p.focus(); };
 ACT.mForgot = () => mtoast('Ask the office to reset your PIN – they can text you a new one.');
 ACT.mPinDel = () => { M.pin = M.pin.slice(0, -1); renderM(); };
 ACT.mPin = d => {
@@ -1122,46 +1256,69 @@ ACT.obDone = () => {
 // Module tiles: [icon, title, subtitle, view, count, id]
 function allTiles(e){
   return [
-    [I('van'),'Walkaround','Vehicle daily check','walks'],[I('digger'),'Plant GA2','Weekly plant check','ga2s'],
-    [I('wrench'),'Job cards','Plant, vehicle & tyre','jobs', e.role === 'Fitter' ? S.jobs.filter(j => j.fitter === e.id && j.status !== 'Complete').length : 0],
+    [I('van'),'Vehicle Checklist','Complete before shift','walks'],[I('digger'),'Plant Checklist','Weekly plant inspection (GA2)','ga2s'],
+    [I('wrench'),'Job Card','Plant, vehicle & tyre','jobs', e.role === 'Fitter' ? S.jobs.filter(j => j.fitter === e.id && j.status !== 'Complete').length : 0],
     [I('site'),'Project hub','Sites, docs & RAMS','projects'],[I('note'),'Dayworks','Extra work sheets','dayworks'],
     [I('tipper'),'Agg Loads','Dockets & trucks','loads'],[I('shield'),'Health & safety','Report, talks, RAMS','hs'],[I('pin'),'Plant locator','Where is every machine','locator'],
   ];
 }
 function jobTiles(e, c){
-  const hs = [I('shield'),'Health & safety','Report, talks, RAMS','hs'];
+  const hs = [I('shield'),'Health & Safety','Report, talks, RAMS','hs'];
   if (!c) return [hs];
   const fore = e.role === 'Foreman' ? [[I('note'),'Dayworks','Extra work sheets','dayworks'],[I('tipper'),'Agg Loads','Log deliveries & muck away','loads']] : [];
   if (c.job === 'Driver') { const v = veh(c.asset);
-    return [[I('van'),'Walkaround', v ? `${v.reg}${walkToday(v.id) ? ' · done today' : ' · due'}` : 'Vehicle daily check','walks', v && !walkToday(v.id) ? 1 : 0],
-      [I('tipper'),'Agg Loads','Log a load & docket','loads'],[I('wrench'),'Report a defect','Raises a job card','jobnew'], hs, ...fore]; }
+    return [[I('van'),'Vehicle Checklist', v ? `Complete before shift · ${v.reg}${walkToday(v.id) ? ' · done today' : ''}` : 'Complete before shift','walks'],
+      [I('tipper'),'Agg Loads','Log a load & docket','loads'],[I('wrench'),'Job Card','Report a defect or log work','jobs'], hs, ...fore]; }
   if (c.job === 'Mechanic') { const n = S.jobs.filter(j => j.fitter === e.id && j.status !== 'Complete').length;
-    return [[I('wrench'),'Job cards', n ? `${n} assigned to you` : 'Plant, vehicle & tyre','jobs', n],[I('pin'),'Plant locator','Find the machine','locator'],[I('digger'),'Plant GA2','Check a machine','ga2s'], hs, ...fore]; }
+    return [[I('wrench'),'Job Card', n ? `${n} assigned to you` : 'Excavators, loaders, heavy machinery','jobs', n],[I('digger'),'Plant Checklist','Weekly plant inspection','ga2s'],[I('van'),'Vehicle Checklist','Complete before shift','walks'],[I('pin'),'Plant locator','Find the machine','locator'], hs, ...fore]; }
   const p = proj(c.project), m = c.asset && plantOf(c.asset);
   return [[I('site'),'My site', `${p.code === 'YARD' ? 'Yard' : p.code} · docs & RAMS`,'project', 0, p.id],
-    ...(m ? [[I('digger'),`GA2 · ${m.no}`, `${ga2State(m)[0]} · last ${fD(m.ga2)}`,'ga2s', ga2State(m)[0] !== 'OK' ? 1 : 0]] : []),
+    [I('digger'),'Plant Checklist', m ? `${m.no} · GA2 ${ga2State(m)[0].toLowerCase()} · last ${fD(m.ga2)}` : 'Weekly plant inspection','ga2s', m && ga2State(m)[0] !== 'OK' ? 1 : 0], [I('wrench'),'Job Card','Report a defect','jobs'],
     hs, [I('pin'),'Plant locator','Where is every machine','locator'], ...fore];
 }
 const tileBtn = t => `<button class="tilebtn" data-a="mGo" data-v="${t[3]}" data-id="${t[5] || ''}">${t[4] ? `<span class="cnt">${t[4]}</span>` : ''}<span class="ti">${t[0]}</span><b>${esc(t[1])}</b><small>${esc(t[2])}</small></button>`;
 ACT.mAllMods = () => { M.allMods = !M.allMods; renderM(); };
+const greet = () => { const h = nowD().getHours(); return h < 12 ? 'Good Morning' : h < 17 ? 'Good Afternoon' : 'Good Evening'; };
+const fTs = d => fT(d) + ':' + String(d.getSeconds()).padStart(2, '0');
+const fDnum = d => `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
+const hms = ms => { const s = Math.max(0, Math.floor(ms / 1000)); return [s / 3600, s / 60 % 60, s % 60].map(x => String(Math.floor(x)).padStart(2, '0')).join(':'); };
+// A driver's Agg Loads stay locked until today's vehicle checklist is in.
+const qaLock = (c, t) => t[3] === 'loads' && c && c.job === 'Driver' && c.asset && !walkToday(c.asset);
+const qaCard = (t, locked) => locked
+  ? `<button class="qa lock" data-a="mToast" data-m="Do your vehicle checklist first – Agg Loads unlocks once it's submitted"><span class="qi">${t[0]}</span><span class="qt"><b>${esc(t[1])}</b><small>${esc(t[2])}</small></span><span class="qpill">${I('lock')} Checklist first</span></button>`
+  : `<button class="qa" data-a="mGo" data-v="${t[3]}" data-id="${t[5] || ''}"><span class="qi">${t[0]}</span><span class="qt"><b>${esc(t[1])}</b><small>${esc(t[2])}</small></span>${t[4] ? `<span class="qn">${t[4]}</span>` : ''}<span class="qc">›</span></button>`;
+const myNotes = e => {
+  const n = [];
+  S.jobs.filter(j => j.fitter === e.id && j.status !== 'Complete').forEach(j => n.push([I('wrench'), `${j.id} assigned to you`, j.title, 'job', j.id]));
+  S.docs.filter(d => d.type === 'RAMS' && d.project === e.project && !(d.sign || []).includes(e.id)).forEach(d => n.push([I('clipboard'), 'RAMS to read & sign', d.name, 'project', d.project]));
+  e.certs.filter(c => daysTo(c.exp) < 45).forEach(c => n.push([I('id'), `${c.t} ${daysTo(c.exp) < 0 ? 'expired' : 'expires in ' + daysTo(c.exp) + ' days'}`, 'Upload the renewed card in Profile', 'me', '']));
+  return n;
+};
 function vHome(){
   const e = me(), c = openClock(e.id);
-  const tiles = jobTiles(e, c), mine = new Set(tiles.map(t => t[3])), rest = allTiles(e).filter(t => !mine.has(t[3]));
-  return { title:'', dark:true, body:`
-    <div class="hero"><span class="logo sm"><img src="logo.png" alt="McCormick Contracts"></span>
-      <h2>Morning, ${esc(e.name.split(' ')[0])}</h2><p>${fD(TODAY)} · ${c ? `Today: <b>${esc(c.job)}</b>` : esc(e.role)}</p>
-      <div class="clockband"><span class="dot ${c ? 'on' : ''}"></span>
-        <span class="t">${c ? `<b>On the clock since ${fT(c.in)}</b>${c.free ? esc(clkJob(c)) : `${esc(proj(c.project).name)} · ${c.inGeo.inFence ? 'on site' : 'off site'}${c.job ? ' · ' + esc(clkJob(c)) : ''}`}` : `<b>Not clocked in</b>Pick your job type and clock in`}</span>
-        <button class="${c ? 'out' : ''}" data-a="${c ? 'mClockOut' : 'mClockIn'}">${c ? 'Clock out' : 'Clock in'}</button></div></div>
-    ${e.status === 'Pending approval' ? `<div class="banner warn">Your onboarding is with the office for approval.</div>` : ''}
-    <div class="sec">${c ? `Your ${esc(c.job.toLowerCase())} tools` : 'Before you clock in'}</div>
-    ${c ? '' : `<p class="muted" style="font-size:13px;margin:-4px 0 10px">Clock in and pick your job type to see the tools for today.</p>`}
-    <div class="tiles">${tiles.map(tileBtn).join('')}</div>
+  // Not clocked in yet: show the tools for their usual job so Quick Access is never empty.
+  const pc = c || { job:defJob(e), asset:defJob(e) === 'Driver' ? defaultVeh(e) : null, project:e.project && e.project !== 'p0' ? e.project : 'p1' };
+  const tiles = jobTiles(e, pc).filter((t, i, all) => all.findIndex(x => x[3] === t[3]) === i), mine = new Set(tiles.map(t => t[3])), rest = allTiles(e).filter(t => !mine.has(t[3]));
+  const nn = myNotes(e).length;
+  return { title:'', body:`
+    <div class="mhead"><div class="mh1"><span class="mav">${initials(e.name)}</span><div class="mhn"><b>${greet()}, ${esc(e.name.split(' ')[0])}</b><span><i class="gdot ${c ? '' : 'off'}"></i><span id="mhclock">${fT(nowD())}</span>${c ? ` · in since ${fT(c.in)}` : ''}</span></div>
+      <button class="mhb sun" data-a="mWeather" aria-label="Weather">${I('sun')}</button><button class="mhb" data-a="mNotes" aria-label="Notifications">${I('bell')}${nn ? '<i class="dotn"></i>' : ''}</button></div>
+      <div class="mh2"><button class="${c ? 'cout' : 'cin'}" data-a="${c ? 'mClockOut' : 'mClockIn'}">${I(c ? 'x' : 'checked')} ${c ? 'Clock Out' : 'Clock In'}</button><button class="csw" data-a="mSwitch">${I('switch')} Switch</button></div>
+      ${c ? `<div class="mhjob">${esc(clkJob(c))}${c.free ? '' : ' · ' + esc(pcode(c.project))}</div>` : ''}</div>
+    ${e.status === 'Pending approval' ? `<div class="banner warn" style="margin-top:14px">Your onboarding is with the office for approval.</div>` : ''}
+    <h3 class="qah">Quick Access</h3>
+    ${c ? '' : `<p class="qasub">Clock in to start your day. These are your usual ${esc(pc.job.toLowerCase())} tools.</p>`}
+    <div class="qas">${tiles.map(t => qaCard(t, qaLock(pc, t))).join('')}</div>
     <button class="allmods" data-a="mAllMods">${M.allMods ? 'Hide other modules' : 'All modules'} <span>${M.allMods ? '‹' : '›'}</span></button>
-    ${M.allMods ? `<div class="tiles">${rest.map(tileBtn).join('')}</div>` : ''}` };
+    ${M.allMods ? `<div class="qas">${rest.map(t => qaCard(t, false)).join('')}</div>` : ''}
+    <p class="appver">App Version : 2.1.4</p>` };
 }
+ACT.mWeather = () => mtoast('Today: 11°C, light showers after 3pm · wind 18 km/h');
+ACT.mNotes = () => { const n = myNotes(me());
+  sheet({ title:'Notifications', sub:n.length ? `${n.length} need${n.length === 1 ? 's' : ''} your attention` : 'You are all caught up', body: () => n.length ? `<div class="rows">${n.map(x => `<button class="row" data-a="mGo" data-v="${x[3]}" data-id="${x[4]}"><span class="ricon">${x[0]}</span><span class="rmain"><b>${esc(x[1])}</b><small>${esc(x[2])}</small></span><span class="chev">›</span></button>`).join('')}</div>` : '<div class="empty">Nothing new.</div>' }); };
+setInterval(() => { const t = $('#mhclock'); if (t) t.textContent = fT(nowD()); const j = $('#jtimer'); if (j && M.d.t0) j.textContent = hms(Date.now() - M.d.t0); }, 1000);
 ACT.mGo = d => go(d.v, { id:d.id, ...(d.c ? { c:d.c } : {}) });
-ACT.mTab = d => goTab(d.v);
+ACT.mTab = d => goTab(d.v === 'chk' ? chkTab() : d.v);
 ACT.mBack = () => back();
 
 // ── Clock in / out with geo-tagging ────────────────────────────────────────
@@ -1174,35 +1331,49 @@ function geoFix(projId){
 }
 function clockSheet(){
   const e = me();
-  M.s = { job:defJob(e), project:e.project && e.project !== 'p0' ? e.project : 'p1' };
+  M.s = { job:'', project:e.project && e.project !== 'p0' ? e.project : 'p1' };
   M.s.veh = (S.vehicles.find(v => v.driver === e.id && inFleet(v)) || {}).id || '';
   M.s.geo = geoFix(M.s.project); M.s.plant = usesMachine(e) ? firstPlant(M.s.project) : '';
-  sheet({ s:M.s, title:'Clock in', body: () => {
-    const job = M.s.job, onSite = SITE_JOBS.includes(job), g = M.s.geo, p = proj(M.s.project);
-    const jobs = `<div class="sec mt0">What are you doing today?</div><div class="jobpick">${JOB_TYPES.map(([j, ic, sub]) => `<button class="${j === job ? 'on' : ''}" data-a="mJob" data-v="${j}">${I(ic)}<b>${j}</b><small>${sub}</small></button>`).join('')}</div>`;
-    if (job === 'Driver') return jobs + `
-      <label class="fld"><span>Your vehicle</span><select data-ms="veh"><option value="">Choose vehicle…</option>${S.vehicles.filter(inFleet).map(v => `<option value="${v.id}" ${v.id === M.s.veh ? 'selected' : ''}>${esc(v.reg)} · ${esc(v.make)}</option>`).join('')}</select></label>`;
-    if (job === 'Mechanic') return jobs;
-    const here = S.plant.filter(x => x.project === M.s.project), other = S.plant.filter(x => x.project !== M.s.project);
-    const opt = x => `<option value="${x.id}" ${x.id === M.s.plant ? 'selected' : ''} ${x.tagged ? 'disabled' : ''}>${esc(x.no)} · ${esc(x.make)}${x.tagged ? ' (tagged out)' : ''}</option>`;
-    return jobs + `
-      <label class="fld"><span>Site</span><select data-ms="project" data-rr="geo">${liveProjects().map(x => `<option value="${x.id}" ${x.id === M.s.project ? 'selected' : ''}>${esc(x.code === 'YARD' ? 'Yard' : x.code)} · ${esc(x.name)}</option>`).join('')}</select></label>
-      <label class="fld"><span>Machine you're using</span><select data-ms="plant"><option value="">No machine – labouring</option>${here.length ? `<optgroup label="On this site">${here.map(opt).join('')}</optgroup>` : ''}<optgroup label="Other machines">${other.map(opt).join('')}</optgroup></select></label>
-      <div class="minimap">${mapSVG({ pins:[{ x:g.x, y:g.y, t:'', c:g.inFence ? '#14975f' : '#d6362f', r:10, title:'You' }], h:560 })}</div>
-      <div class="banner ${g.inFence ? 'ok' : 'bad'}" style="margin-top:10px">${g.inFence ? `You're inside the <b>${esc(p.code === 'YARD' ? 'Yard' : p.code)}</b> site boundary (${g.dist} m from centre, ±${g.acc} m).`
-        : `You're <b>${(g.dist / 1000).toFixed(1)} km</b> outside the ${esc(p.name)} boundary. You can only clock in once you're on site.`}</div>
-      <div class="seg" style="margin-top:4px"><button class="${!M.simOff ? 'on' : ''}" data-a="mSim" data-v="0">Demo: on site</button><button class="${M.simOff ? 'on' : ''}" data-a="mSim" data-v="1">Demo: off site</button></div>`;
-  }, foot: () => { const block = SITE_JOBS.includes(M.s.job) && !M.s.geo.inFence;
-    return `<button class="mbtn hv" data-a="mDoIn" ${block ? 'disabled' : ''}>${block ? 'Get to site to clock in' : 'Clock in now'}</button>`; } });
+  sheet({ s:M.s, title:'Clock In', sub:'Select site and role to clock in', body:tsBody, foot: () => tsFoot('mDoIn') });
 }
 const firstPlant = pid => (S.plant.find(x => x.project === pid && !x.tagged) || {}).id || '';
 ACT.mJob = d => { M.s.job = d.v; M.s.geo = geoFix(M.s.project); renderM(); };
 ACT.mClockIn = () => clockSheet();
-ACT.mClockOut = () => { const c = openClock(M.user); if (!c) return; M.s = { project:c.project }; M.s.geo = geoFix(c.project); ACT.mDoOut(); M.s = {}; };
+ACT.mClockOut = () => { const c = openClock(M.user); if (!c) return;
+  sheet({ title:'Clock Out', center:true, s:{ project:c.project, geo:geoFix(c.project) }, body: () => `<p class="shsub">Are you sure you want to clock out?</p>
+    <div class="infobox one"><span>Site: <b>${c.free ? '-' : esc(proj(c.project).name)}</b></span><span>Job: <b>${esc(clkJob(c))}</b></span><span>Clocked in: <b>${fTs(c.in)}</b></span></div>`,
+    foot: () => `<div class="btn2"><button class="mbtn grey" data-a="mClose">Cancel</button><button class="mbtn" data-a="mDoOut">Clock Out</button></div>` }); };
+// Shared timesheet sheet body (clock in + switch): job type, then vehicle or site + machine.
+function tsBody(){
+    const job = M.s.job, g = M.s.geo, here = S.plant.filter(x => x.project === M.s.project), other = S.plant.filter(x => x.project !== M.s.project);
+    const opt = x => `<option value="${x.id}" ${x.id === M.s.plant ? 'selected' : ''} ${x.tagged ? 'disabled' : ''}>${esc(x.no)} · ${esc(x.make)}${x.tagged ? ' (tagged out)' : ''}</option>`;
+    return `<label class="fld"><span>Job Type</span><select class="bigsel" data-ms="job" data-rr="geo"><option value="" ${job ? '' : 'selected'} disabled>Select Job Type</option>${JOB_TYPES.map(([j]) => `<option ${j === job ? 'selected' : ''}>${j}</option>`).join('')}</select></label>
+      ${job === 'Driver' ? `<label class="fld"><span>Select Vehicle</span><select class="bigsel" data-ms="veh"><option value="">Select Vehicle</option>${S.vehicles.filter(inFleet).map(v => `<option value="${v.id}" ${v.id === M.s.veh ? 'selected' : ''}>${esc(v.reg)} · ${esc(v.make)}</option>`).join('')}</select></label>` : ''}
+      ${job === OPLAB ? `<label class="fld"><span>Select Site</span><select class="bigsel" data-ms="project" data-rr="geo">${liveProjects().map(x => `<option value="${x.id}" ${x.id === M.s.project ? 'selected' : ''}>${esc(x.code === 'YARD' ? 'Yard' : x.code)} · ${esc(x.name)}</option>`).join('')}</select></label>
+        <label class="fld"><span>Select Machine</span><select class="bigsel" data-ms="plant"><option value="">No machine – labouring</option>${here.length ? `<optgroup label="On this site">${here.map(opt).join('')}</optgroup>` : ''}<optgroup label="Other machines">${other.map(opt).join('')}</optgroup></select></label>
+        <div class="banner ${g.inFence ? 'ok' : 'bad'}">${g.inFence ? `GPS: inside the ${esc(pcode(M.s.project))} boundary.` : `GPS: ${(g.dist / 1000).toFixed(1)} km outside the site. Get to site to switch.`}</div>
+        <div class="seg" style="margin-top:4px"><button class="${!M.simOff ? 'on' : ''}" data-a="mSim" data-v="0">Demo: on site</button><button class="${M.simOff ? 'on' : ''}" data-a="mSim" data-v="1">Demo: off site</button></div>` : ''}
+      ${job === 'Mechanic' ? '<p class="muted" style="font-size:13.5px">Mechanics don’t pick a site or machine.</p>' : ''}`; 
+}
+const tsFoot = act => `<div class="btn2"><button class="mbtn grey" data-a="mClose">Cancel</button><button class="mbtn" data-a="${act}" ${M.s.job === OPLAB && !M.s.geo.inFence ? 'disabled' : ''}>Submit</button></div>`;
+// Switch: close the current timesheet line and open a new one with a different job / site / machine.
+ACT.mSwitch = () => { const c = openClock(M.user); if (!c) return mtoast('Clock in first – then you can switch job');
+  const e = me(), project = c.free ? (e.project && e.project !== 'p0' ? e.project : 'p1') : c.project;
+  sheet({ title:'Update Timesheet', sub:'Select site and role to switch', s:{ job:c.job, veh:c.job === 'Driver' ? c.asset : defaultVeh(e), plant:c.job === OPLAB ? c.asset || '' : '', project, geo:geoFix(project) }, body:tsBody,
+    foot: () => tsFoot('mSwitchSave') });
+};
+ACT.mSwitchSave = () => {
+  const c = openClock(M.user), job = M.s.job, onSite = SITE_JOBS.includes(job);
+  if (job === 'Driver' && !M.s.veh) return mtoast('Choose your vehicle');
+  if (onSite && !M.s.geo.inFence) return mtoast('You need to be inside the site boundary');
+  c.out = nowD(); c.brk = 0; c.inj = 'No'; c.outGeo = { ...c.inGeo };
+  ACT.mDoIn(); mtoast(`Timesheet updated · now ${esc(clkJob(openClock(M.user)))}`);
+};
 ACT.mSim = d => { M.simOff = d.v === '1'; M.s.geo = geoFix(M.s.project); renderM(); };
 ACT.mSeg = d => { M.s[d.k] = d.v; renderM(); };
 ACT.mDoIn = () => {
   const job = M.s.job, g = M.s.geo, onSite = SITE_JOBS.includes(job);
+  if (!job) return mtoast('Select your job type');
   if (job === 'Driver' && !M.s.veh) return mtoast('Choose your vehicle');
   if (onSite && !g.inFence) return mtoast('You need to be inside the site boundary to clock in');
   const c = { id:nid('CK'), emp:M.user, job, asset:job === 'Driver' ? M.s.veh : job === OPLAB ? M.s.plant || null : null, free:!onSite,
@@ -1219,48 +1390,53 @@ ACT.mDoOut = () => {
   mtoast(`Clocked out · ${fH(Math.max(0, hrs(c.out - c.in) - c.brk / 60))} today${c.inj === 'Yes' ? ' · injury report sent to H&S' : ''}`);
 };
 
-// ── Checklists (walkaround + GA2 share the same control) ──────────────────
-function chkList(groups){
+// ── Checklists (vehicle + plant share the standard table form) ────────────
+function chkTable(groups){
   const r = M.d.res || {}, n = M.d.notes || {};
-  return `<div class="card" style="overflow:hidden">${groups.map(([g, items]) => `<div class="chkgrp">${esc(g)}</div>${items.map(it => `
-    <div class="chk"><span class="cl">${esc(it)}${r[it] === 'bad' && !n[it] ? '<small>Describe the defect</small>' : ''}</span><span class="opts">
-      <button class="ok ${r[it] === 'ok' ? 'on' : ''}" data-a="mChk" data-i="${esc(it)}" data-v="ok">✓</button>
-      <button class="bad ${r[it] === 'bad' ? 'on' : ''}" data-a="mChk" data-i="${esc(it)}" data-v="bad">✗</button>
-      <button class="na ${r[it] === 'na' ? 'on' : ''}" data-a="mChk" data-i="${esc(it)}" data-v="na">N/A</button></span></div>
-    ${r[it] === 'bad' ? `<div class="chknote"><input data-note="${esc(it)}" value="${esc(n[it] || '')}" placeholder="What's wrong?"></div>` : ''}`).join('')}`).join('')}</div>`;
+  return `<div class="ctbl"><div class="cth"><span>Item</span><span>Checked</span><span>Remark</span></div>${groups.map(([g, items]) => `<div class="ctg">${esc(g)}</div>${items.map(it => `
+    <div class="ctr ${r[it] === 'bad' ? 'bad' : ''}"><span class="cti">${esc(it)}</span><button class="ctc ${r[it] || ''}" data-a="mChkCycle" data-i="${esc(it)}" aria-label="Checked">${r[it] === 'ok' ? I('check') : r[it] === 'bad' ? I('x') : r[it] === 'na' ? 'N/A' : ''}</button><input class="ctn" data-note="${esc(it)}" value="${esc(n[it] || '')}" placeholder="${r[it] === 'bad' ? 'Describe defect' : 'Remark'}"></div>`).join('')}`).join('')}</div>
+    <p class="cthint">Tap <b>Checked</b> once for OK, twice for a defect, three times for N/A.</p>`;
 }
-ACT.mChk = d => { (M.d.res = M.d.res || {})[d.i] = d.v; renderM(); };
+ACT.mChkCycle = d => { const r = (M.d.res = M.d.res || {}); const nx = { '':'ok', ok:'bad', bad:'na', na:'' }[r[d.i] || '']; if (nx) r[d.i] = nx; else delete r[d.i]; renderM(); };
 ACT.mAllOk = () => { const r = (M.d.res = M.d.res || {}); M.d.groups.forEach(([, items]) => items.forEach(i => { if (!r[i]) r[i] = 'ok'; })); renderM(); };
+ACT.mNil = () => { const r = M.d.res || {}; if (Object.values(r).includes('bad')) return mtoast('There are defects marked – clear them first'); ACT.mAllOk(); };
 function chkValidate(){
   const r = M.d.res || {}, n = M.d.notes || {}; const all = M.d.groups.flatMap(([, i]) => i);
   const missing = all.filter(i => !r[i]).length; if (missing) return `${missing} item${missing > 1 ? 's' : ''} still to check`;
-  const nonote = all.filter(i => r[i] === 'bad' && !n[i]).length; if (nonote) return 'Describe each defect';
-  if (!M.d.sig) return 'Please sign the check';
+  const nonote = all.filter(i => r[i] === 'bad' && !n[i]).length; if (nonote) return 'Add a remark for each defect';
+  if (!M.d.sig) return 'Please add your signature';
   return null;
 }
 const photoRow = key => `<div class="photo">${(M.d[key] || []).map(src => `<img src="${src}" alt="">`).join('')}<label><svg class="i" aria-hidden="true"><use href="#i-camera"/></svg><input type="file" accept="image/*" capture="environment" data-photo="${key}"></label></div>`;
+const photo6 = key => { const ps = M.d[key] || []; return `<div class="photo6">${ps.map(src => `<img src="${src}" alt="">`).join('')}${ps.length < 6 ? `<label>${I('camera')}<span>Add Photo</span><input type="file" accept="image/*" capture="environment" data-photo="${key}" hidden></label>` : ''}</div>`; };
+const chkFoot = () => { const r = M.d.res || {}, all = M.d.groups.flatMap(([, i]) => i), nil = all.every(i => r[i] && r[i] !== 'bad');
+  return `<button class="nilrow" data-a="mNil"><span class="nilbox ${nil ? 'ok' : 'no'}">${I(nil ? 'check' : 'x')}</span><b>NIL Defects</b></button>
+    <button class="selall" data-a="mAllOk">${I('dblcheck')} Select All</button>
+    <div class="phhd">${I('camera')} Photos (${(M.d.photos || []).length}/6)</div>${photo6('photos')}
+    <div class="flab">Signature</div><button class="sigrow" data-a="mSigSheet">${M.d.sig ? `<img src="${M.d.sig}" alt="Signature">` : `${I('pen')}<span>Add Signature</span>`}<span class="chev">›</span></button>`; };
+ACT.mSigSheet = () => sheet({ title:'Add Signature', s:{ sig:M.d.sig }, body: () => sigBox(), after: () => initSig($('.sheet .sig'), v => M.s.sig = v, M.s.sig),
+  foot: () => `<div class="btn2"><button class="mbtn grey" data-a="mClose">Cancel</button><button class="mbtn" data-a="mSigSave">Save</button></div>` });
+ACT.mSigSave = () => { if (!M.s.sig) return mtoast('Sign in the box first'); const s = M.s.sig; closeSheet(); M.d.sig = s; renderM(); };
+const infoBox = (k, v) => { M.d._t = M.d._t || nowD(); return `<div class="infobox"><span>Employee : <b>${esc(me().name.split(' ')[0])}</b></span><span>Date : <b>${fDnum(M.d._t)}</b></span><span>${k} : <b>${esc(v || '—')}</b></span><span>Time : <b>${fTs(M.d._t)}</b></span></div>`; };
 
-// Vehicle walkaround
-// ── Check history (walkaround + GA2): the user's own checks first, ＋ starts a new one ──
+// ── Check history: this week's submissions first, + New Checklist at the bottom ──
 const chkResult = (c, isGa2) => c.defects.length ? (isGa2 && !c.fit ? bdg('Tagged out', 'r') : bdg(c.defects.length + ' defect' + (c.defects.length > 1 ? 's' : ''), isGa2 ? 'a' : 'r')) : bdg('All OK', 'g');
-function chkHistory({ title, list, isGa2, newAct, label, empty, top }){
-  const groups = {}; list.forEach(c => { const k = sameDay(c.at, TODAY) ? 'Today' : sameDay(c.at, day(-1)) ? 'Yesterday' : daysTo(c.at) > -7 ? 'This week' : 'Earlier'; (groups[k] = groups[k] || []).push(c); });
-  return { title, back:true, action:['＋ New', newAct], body:`${top || ''}
-    ${list.length ? Object.entries(groups).map(([g, cs]) => `<div class="sec">${g}</div><div class="rows">${cs.map(c => `<button class="row" data-a="mChkView" data-id="${c.id}" data-k="${isGa2 ? 'ga2' : 'walk'}">
-      <span class="ricon">${I(isGa2 ? 'digger' : 'van')}</span><span class="rmain"><b>${esc(label(c))}</b><small>${c.id} · ${fD(c.at)} ${fT(c.at)} · ${isGa2 ? c.hours.toLocaleString() + ' h' : c.odo.toLocaleString() + ' km'}</small></span>${chkResult(c, isGa2)}</button>`).join('')}</div>`).join('')
-      : `<div class="empty">${empty}</div>`}
-    <button class="fab" data-a="${newAct}" aria-label="New check">＋</button>` };
+const fDL = d => `${DOW[d.getDay()]}, ${d.getDate()} ${MON[d.getMonth()]} ${d.getFullYear()} at ${fT(d)}`;
+function wkStart(){ const d = new Date(TODAY); d.setDate(d.getDate() - (d.getDay() + 6) % 7); d.setHours(0, 0, 0, 0); return d; }
+function chkHistory({ title, list, isGa2, newAct, label, who }){
+  const q = (M.d.q || '').toLowerCase(), ws = wkStart(), we = new Date(ws); we.setDate(ws.getDate() + 4);
+  const f = list.filter(c => !q || `${label(c)} ${c.id}`.toLowerCase().includes(q));
+  const wk = f.filter(c => c.at >= ws), old = f.filter(c => c.at < ws);
+  const card = c => `<div class="subcard"><div class="sc1"><b>${esc(label(c))}</b>${chkResult(c, isGa2)}</div><div class="scd">${fDL(c.at)}</div>
+    <div class="scw"><span>${who}</span><b>${esc(emp(c.emp).name.split(' ')[0])}</b></div><button class="pdfbtn" data-a="mChkView" data-id="${c.id}" data-k="${isGa2 ? 'ga2' : 'walk'}">${I('pdf')} View PDF</button></div>`;
+  return { title, back:true, body:`<label class="search">${I('search')}<input data-m="q" data-rr="1" value="${esc(M.d.q || '')}" placeholder="Search..."></label>
+    <div class="wkhd"><span>This week's submissions</span><span>${ws.getDate()} ${MON[ws.getMonth()]} – ${fDY(we)}</span></div>
+    ${wk.map(card).join('') || `<div class="empty">Nothing submitted this week yet.</div>`}
+    ${old.length ? `<div class="wkhd"><span>Earlier</span></div>${old.map(card).join('')}` : ''}<div class="padb"></div>
+    <button class="newbar" data-a="${newAct}">+ New Checklist</button>` };
 }
-function vWalks(){
-  const e = me(), v = veh(defaultVeh(e));
-  const top = v ? `<div class="chknext card pad"><div><small>Your vehicle today</small><b>${esc(v.reg)} · ${esc(v.make)}</b></div>${walkToday(v.id) ? bdg('Done today', 'g') : `<button class="mbtn hv sm" data-a="mNewWalk">Start check</button>`}</div>` : '';
-  return chkHistory({ title:'Walkarounds', list:S.walks.filter(w => w.emp === e.id), isGa2:false, newAct:'mNewWalk', label:w => veh(w.veh).reg, empty:'You haven\'t done a walkaround yet. Tap ＋ to start one.', top });
-}
-function vGa2s(){
-  const e = me(), p = plantOf(defaultPlant(e));
-  const top = p ? `<div class="chknext card pad"><div><small>Your machine today</small><b>${esc(p.no)} · ${esc(p.make)}</b></div>${bdg('GA2 ' + ga2State(p)[0], ga2State(p)[1])}</div>` : '';
-  return chkHistory({ title:'Plant GA2', list:S.ga2s.filter(g => g.emp === e.id), isGa2:true, newAct:'mNewGa2', label:g => plantOf(g.plant).no, empty:'You haven\'t done a GA2 yet. Tap ＋ to start one.', top });
-}
+function vWalks(){ const e = me(); return chkHistory({ title:'Vehicle Checklist', list:S.walks.filter(w => w.emp === e.id), isGa2:false, newAct:'mNewWalk', label:w => veh(w.veh).reg, who:'Driver' }); }
+function vGa2s(){ const e = me(); return chkHistory({ title:'Plant Checklist', list:S.ga2s.filter(g => g.emp === e.id), isGa2:true, newAct:'mNewGa2', label:g => plantOf(g.plant).no, who:'Operator' }); }
 // Default vehicle / machine: what they picked at clock-in, else what they're assigned.
 const defaultVeh = e => { const c = openClock(e.id); if (c && c.job === 'Driver' && c.asset) return c.asset; const v = S.vehicles.find(x => x.driver === e.id && inFleet(x)); return v ? v.id : ''; };
 const defaultPlant = e => { const c = openClock(e.id); if (c && c.job === OPLAB && c.asset) return c.asset; return ''; };
@@ -1270,7 +1446,7 @@ ACT.mChkView = d => {
   const isGa2 = d.k === 'ga2', c = (isGa2 ? S.ga2s : S.walks).find(x => x.id === d.id);
   const name = isGa2 ? `${plantOf(c.plant).no} · ${plantOf(c.plant).make}` : `${veh(c.veh).reg} · ${veh(c.veh).make}`;
   const jcs = S.jobs.filter(j => j.src === c.id);
-  sheet({ title:`${c.id}`, body: () => `<div class="kv card pad" style="margin-bottom:12px"><dt>${isGa2 ? 'Machine' : 'Vehicle'}</dt><dd>${esc(name)}</dd><dt>When</dt><dd>${fD(c.at)} ${fT(c.at)}</dd><dt>${isGa2 ? 'Hours' : 'Odometer'}</dt><dd>${isGa2 ? c.hours.toLocaleString() + ' h' : c.odo.toLocaleString() + ' km'}</dd><dt>Result</dt><dd>${chkResult(c, isGa2)}</dd></div>
+  sheet({ title:`${c.id}`, body: () => `<div class="kv card pad" style="margin-bottom:12px"><dt>${isGa2 ? 'Machine' : 'Vehicle'}</dt><dd>${esc(name)}</dd><dt>When</dt><dd>${fD(c.at)} ${fT(c.at)}</dd><dt>${isGa2 ? 'Hours' : 'Odometer'}</dt><dd>${isGa2 ? c.hours.toLocaleString() + ' h' : c.odo.toLocaleString() + ' km'}</dd><dt>Result</dt><dd>${chkResult(c, isGa2)}</dd>${c.rem ? `<dt>Remarks</dt><dd>${esc(c.rem)}</dd>` : ''}${c.svc ? `<dt>Service notes</dt><dd>${esc(c.svc)}</dd>` : ''}</div>
     ${c.defects.length ? `<div class="sec mt0">Defects</div><div class="rows">${c.defects.map(df => `<div class="row"><span class="ricon">${I('alert')}</span><span class="rmain"><b>${esc(df.item)}</b><small>${esc(df.note || '')}</small></span></div>`).join('')}</div>` : `<div class="banner ok">Every item passed.</div>`}
     ${jcs.length ? `<div class="sec">Job cards raised</div><div class="rows">${jcs.map(j => `<button class="row" data-a="mGo" data-v="job" data-id="${j.id}"><span class="ricon">${I('wrench')}</span><span class="rmain"><b>${j.id} · ${esc(j.title)}</b><small>${esc(j.status)}</small></span><span class="chev">›</span></button>`).join('')}</div>` : ''}
     ${(c.photos || []).length ? `<div class="sec">Photos</div><div class="photo">${c.photos.map(p => `<img src="${p}" alt="">`).join('')}</div>` : ''}
@@ -1282,23 +1458,21 @@ function vWalk(){
   if (M.d._for && M.d._for !== vid) { M.d.res = {}; M.d.notes = {}; delete M.d.odo; } M.d._for = vid;
   const v = veh(vid); M.d.groups = itemsFor(WALK_ITEMS, v.kind); const c = openClock(e.id), fromClock = c && c.job === 'Driver' && c.asset === vid;
   const done = walkToday(v.id);
-  return { title:'New walkaround', back:true, noTabs:true, body:`
-    ${done ? `<div class="banner ok">✓ ${esc(emp(done.emp).name)} already checked this vehicle at ${fT(done.at)} today.</div>` : ''}
-    <label class="fld"><span>Vehicle${fromClock ? ' <em class="fromclk">from your clock-in</em>' : ''}</span><select data-m="veh" data-rr="1">${S.vehicles.filter(inFleet).map(x => `<option value="${x.id}" ${x.id === vid ? 'selected' : ''}>${esc(x.reg)} · ${esc(x.make)}</option>`).join('')}</select></label>
-    <div class="kv card pad" style="margin-bottom:12px"><dt>Type</dt><dd>${esc(v.type)}</dd><dt>CVRT due</dt><dd>${fDY(v.cvrt)} ${daysTo(v.cvrt) <= 30 ? bdg(daysTo(v.cvrt) + 'd', 'a') : ''}</dd><dt>Motor tax</dt><dd>${fDY(v.tax)}</dd></div>
-    <label class="fld"><span>Odometer (km)</span><input type="number" inputmode="numeric" data-m="odo" value="${esc(M.d.odo ?? v.odo)}"></label>
-    <div style="display:flex;align-items:center;margin:4px 0 8px"><div class="sec" style="margin:0;flex:1">Checklist</div><button class="mbtn ghost sm" data-a="mAllOk">Mark rest OK</button></div>
-    ${chkList(M.d.groups)}
-    <div class="sec">Photos</div>${photoRow('photos')}
-    <div class="sec">Driver signature</div>${sigBox()}
-    <div style="height:14px"></div><button class="mbtn hv" data-a="mWalkSubmit">Submit walkaround</button>`, after: () => initSig($('.sig'), v => M.d.sig = v, M.d.sig) };
+  return { title:'Vehicle Checklist', back:true, body:`${infoBox('Reg', v.reg)}
+    ${done ? `<div class="banner ok">${esc(emp(done.emp).name)} already checked this vehicle at ${fT(done.at)} today.</div>` : ''}
+    <label class="fld"><span>Select Truck${fromClock ? ' <em class="fromclk">from your clock-in</em>' : ''}</span><select class="bigsel" data-m="veh" data-rr="1">${S.vehicles.filter(inFleet).map(x => `<option value="${x.id}" ${x.id === vid ? 'selected' : ''}>${esc(x.reg)} · ${esc(x.make)}</option>`).join('')}</select></label>
+    <label class="fld"><span>General Remarks</span><input data-m="rem" value="${esc(M.d.rem || '')}" placeholder="Enter general remarks..."></label>
+    <label class="fld"><span>Odometer Reading *</span><input type="number" inputmode="numeric" data-m="odo" value="${esc(M.d.odo ?? '')}" placeholder="Last reading ${v.odo.toLocaleString()} km"></label>
+    ${chkTable(M.d.groups)}${chkFoot()}<div class="padb"></div>
+    <button class="subbar" data-a="mWalkSubmit">Submit</button>` };
 }
 const SEVERE = ['Brakes & handbrake','Steering','Seat belts','Seat, seat belt & ROPS/FOPS','Controls & isolators marked and working','Hydraulic hoses & rams'];
 ACT.mWalkSubmit = () => {
+  if (!M.d.odo) return mtoast('Enter the odometer reading');
   const err = chkValidate(); if (err) return mtoast(err);
   const v = veh(M.d.veh); const r = M.d.res, n = M.d.notes || {};
   const defects = Object.keys(r).filter(i => r[i] === 'bad').map(i => ({ item:i, note:n[i] }));
-  const w = { id:'WA-' + (2201 + S.walks.length), veh:v.id, emp:M.user, at:nowD(), odo:+M.d.odo || v.odo, defects, sig:M.d.sig, photos:M.d.photos || [] };
+  const w = { id:'WA-' + (2201 + S.walks.length), veh:v.id, emp:M.user, at:nowD(), odo:+M.d.odo || v.odo, defects, sig:M.d.sig, photos:M.d.photos || [], rem:M.d.rem || '' };
   S.walks.unshift(w); v.odo = w.odo;
   const jcs = defects.map(df => raiseJob({ type: /Tyre|Wheel/.test(df.item) ? 'Tyre' : 'Vehicle', asset:v.id, title:`${df.item}: ${df.note}`, desc:df.note, pri:SEVERE.includes(df.item) ? 'High' : 'Medium', src:w.id, photo:(w.photos || [])[0] }));
   log(me().name, `submitted walkaround ${w.id} for ${v.reg}${defects.length ? ` with ${defects.length} defect(s)` : ''}`);
@@ -1316,30 +1490,28 @@ function vGa2(){
   const pid = M.d.plant || M.p.id || defaultPlant(e) || (S.plant.find(x => c && x.project === c.project && !x.tagged) || S.plant.find(x => !x.tagged)).id; M.d.plant = pid;
   if (M.d._for && M.d._for !== pid) { M.d.res = {}; M.d.notes = {}; delete M.d.hours; delete M.d.fit; } M.d._for = pid;
   const fromClock = c && c.job === OPLAB && c.asset === pid;
-  const p = plantOf(pid); M.d.groups = Object.entries(GA2_ITEMS).filter(([g]) => g !== 'Attachments & lifting' || p.lifting || true);
-  const st = ga2State(p), g1 = ga1State(p.ga1);
-  const hasBad = Object.values(M.d.res || {}).includes('bad');
-  return { title:'New GA2 check', back:true, noTabs:true, body:`
-    <label class="fld"><span>Machine${fromClock ? ' <em class="fromclk">from your clock-in</em>' : ''}</span><select data-m="plant" data-rr="1">${S.plant.map(x => `<option value="${x.id}" ${x.id === pid ? 'selected' : ''}>${esc(x.no)} · ${esc(x.make)}${x.tagged ? ' (tagged out)' : ''}</option>`).join('')}</select></label>
-    <div class="card pad" style="margin-bottom:12px"><b>${esc(p.make)} · ${esc(p.type)}</b><div class="muted" style="font-size:13px">Serial ${esc(p.serial)} · ${esc(proj(p.project).name)}</div>
-      <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">${bdg('GA2 ' + st[0], st[1])}${p.ga1 ? bdg('GA1 ' + g1[0], g1[1]) : ''}</div></div>
+  const p = plantOf(pid); M.d.groups = Object.entries(GA2_ITEMS);
+  const g1 = ga1State(p.ga1), hasBad = Object.values(M.d.res || {}).includes('bad');
+  return { title:'Plant Checklist', back:true, body:`${infoBox('Site', proj(p.project).name)}
+    <label class="fld"><span>Select Machine *${fromClock ? ' <em class="fromclk">from your clock-in</em>' : ''}</span><select class="bigsel" data-m="plant" data-rr="1">${S.plant.map(x => `<option value="${x.id}" ${x.id === pid ? 'selected' : ''}>${esc(x.no)} · ${esc(x.make)}${x.tagged ? ' (tagged out)' : ''}</option>`).join('')}</select></label>
     ${p.ga1 && g1[1] === 'r' ? `<div class="banner bad">The machine's GA1 thorough examination has expired. It must not be used for lifting.</div>` : ''}
-    <label class="fld" style="margin-top:12px"><span>Hour meter</span><input type="number" data-m="hours" value="${esc(M.d.hours ?? p.hours)}"></label>
-    <div style="display:flex;align-items:center;margin:4px 0 8px"><div class="sec" style="margin:0;flex:1">Weekly inspection (GA2)</div><button class="mbtn ghost sm" data-a="mAllOk">Mark rest OK</button></div>
-    ${chkList(M.d.groups)}
-    ${hasBad ? `<div class="sec">Is the machine safe to use?</div><div class="seg">${['Safe – minor defect','Not safe – tag out'].map(x => `<button data-a="mDSeg" data-k="fit" data-v="${x}" class="${M.d.fit === x ? 'on' : ''}">${x}</button>`).join('')}</div>` : ''}
-    <div class="sec">Photos</div>${photoRow('photos')}
-    <div class="sec">Competent person signature</div>${sigBox()}
-    <div style="height:14px"></div><button class="mbtn hv" data-a="mGa2Submit">Submit GA2</button>`, after: () => initSig($('.sig'), v => M.d.sig = v, M.d.sig) };
+    <label class="fld"><span>Plant ID *</span><input value="${esc(p.no)} · ${esc(p.serial)}" readonly></label>
+    <label class="fld"><span>Operating Hours *</span><input type="number" data-m="hours" value="${esc(M.d.hours ?? '')}" placeholder="Last reading ${p.hours.toLocaleString()} h"></label>
+    <label class="fld"><span>Service Notes</span><input data-m="svc" value="${esc(M.d.svc || '')}" placeholder="Enter service notes..."></label>
+    ${chkTable(M.d.groups)}
+    ${hasBad ? `<div class="flab">Is the machine safe to use?</div><div class="seg">${['Safe – minor defect','Not safe – tag out'].map(x => `<button data-a="mDSeg" data-k="fit" data-v="${x}" class="${M.d.fit === x ? 'on' : ''}">${x}</button>`).join('')}</div>` : ''}
+    ${chkFoot()}<div class="padb"></div>
+    <button class="subbar" data-a="mGa2Submit">Submit</button>` };
 }
 ACT.mDSeg = d => { M.d[d.k] = d.v; renderM(); };
 ACT.mGa2Submit = () => {
+  if (!M.d.hours) return mtoast('Enter the operating hours');
   const err = chkValidate(); if (err) return mtoast(err);
   const p = plantOf(M.d.plant), r = M.d.res, n = M.d.notes || {};
   const defects = Object.keys(r).filter(i => r[i] === 'bad').map(i => ({ item:i, note:n[i] }));
   if (defects.length && !M.d.fit) return mtoast('Say whether the machine is safe to use');
   const fit = !defects.length || M.d.fit.startsWith('Safe');
-  const g = { id:'GA2-' + (882 + S.ga2s.length - 8), plant:p.id, emp:M.user, at:nowD(), hours:+M.d.hours || p.hours, defects, fit, sig:M.d.sig, photos:M.d.photos || [] };
+  const g = { id:'GA2-' + (882 + S.ga2s.length - 8), plant:p.id, emp:M.user, at:nowD(), hours:+M.d.hours || p.hours, defects, fit, sig:M.d.sig, photos:M.d.photos || [], svc:M.d.svc || '' };
   S.ga2s.unshift(g); p.ga2 = nowD(); p.hours = g.hours; p.tagged = !fit;
   const jcs = defects.map(df => raiseJob({ type:'Plant', asset:p.id, title:`${df.item}: ${df.note}`, desc:df.note + (fit ? '' : ' – machine tagged out of use.'), pri:fit ? 'Medium' : 'High', src:g.id }));
   log(me().name, `submitted ${g.id} for ${p.no}`);
@@ -1350,15 +1522,26 @@ ACT.mGa2Submit = () => {
 const jobTone = s => ({ 'Open':'r', 'Assigned':'a', 'In progress':'b', 'Complete':'g' }[s]);
 const priTone = p => ({ High:'r', Medium:'a', Low:'x' }[p]);
 function vJobs(){
-  const e = me(), f = M.d.f || (e.role === 'Fitter' ? 'mine' : 'open');
-  let list = S.jobs.filter(j => f === 'done' ? j.status === 'Complete' : j.status !== 'Complete');
-  if (f === 'mine') list = list.filter(j => j.fitter === e.id || j.raisedBy === e.id);
-  return { title:'Job cards', back:true, action:['＋ New','mJobNew'], body:`
-    <div class="seg">${[['mine', e.role === 'Fitter' ? 'Assigned to me' : 'Mine'],['open','All open'],['done','Complete']].map(([k, l]) => `<button data-a="mDSeg" data-k="f" data-v="${k}" class="${f === k ? 'on' : ''}">${l}</button>`).join('')}</div>
-    <div class="rows">${list.map(j => `<button class="row" data-a="mGo" data-v="job" data-id="${j.id}"><span class="ricon">${{Plant:I('digger'),Vehicle:I('van'),Tyre:I('tyre')}[j.type]}</span>
-      <span class="rmain"><b>${esc(j.title)}</b><small>${j.id} · ${esc(assetLabel(j.asset))}</small><small>${bdg(j.status, jobTone(j.status))} ${bdg(j.pri, priTone(j.pri))}</small></span><span class="chev">›</span></button>`).join('') || '<div class="empty">Nothing here.</div>'}</div>` };
+  const st = M.d.st || 'all', ty = M.d.ty || 'all', q = (M.d.q || '').toLowerCase();
+  const list = S.jobs.filter(j => st === 'all' || (st === 'done' ? j.status === 'Complete' : j.status !== 'Complete')).filter(j => ty === 'all' || j.type === ty)
+    .filter(j => !q || `${j.id} ${j.title} ${assetLabel(j.asset)}`.toLowerCase().includes(q));
+  const pill = (key, v, l, ic) => `<button class="pill ${(M.d[key] || 'all') === v ? 'on' : ''}" data-a="mDSeg" data-k="${key}" data-v="${v}">${ic ? I(ic) : ''}${l}</button>`;
+  return { title:'Job Cards', back:true, body:`
+    <label class="search r"><input data-m="q" data-rr="1" value="${esc(M.d.q || '')}" placeholder="Search job cards...">${I('search')}</label>
+    <div class="pills">${pill('st','all','All')}${pill('st','active','Active')}${pill('st','done','Completed')}</div>
+    <div class="pills">${pill('ty','all','All Types')}${pill('ty','Vehicle','Vehicle','van')}${pill('ty','Plant','Plant','digger')}${pill('ty','Tyre','Tyre','tyre')}</div>
+    <button class="bigbtn" data-a="mJobNew">+ Create New Job Card</button>
+    <div class="wkhd"><span>All job cards (${list.length})</span></div>
+    ${list.map(j => { const who = j.fitter ? emp(j.fitter) : j.raisedBy === 'office' ? { name:'Office' } : emp(j.raisedBy), h = j.hours || 0;
+      return `<div class="jcard" data-a="mGo" data-v="job" data-id="${j.id}"><div class="jc1"><b>${j.id}</b><span class="jtag ${j.type}">${I({ Plant:'digger', Vehicle:'van', Tyre:'tyre' }[j.type])} ${j.type}</span><span class="jst">${esc(j.status.toLowerCase())}</span></div>
+        <div class="jc2">${esc(j.jtype || j.title)} · ${esc(assetLabel(j.asset).split(' · ')[0])} · ${isoDate(j.at)}</div>
+        <div class="jc3"><span class="jav">${initials(who.name)}</span>${esc(who.name.split(' ')[0])} · ${Math.floor(h)}h ${Math.round(h % 1 * 60)}m</div>
+        <button class="pdfbtn" data-a="mGo" data-v="job" data-id="${j.id}">${I('pdf')} View PDF</button></div>`; }).join('') || '<div class="empty">No job cards match.</div>'}` };
 }
-ACT.mJobNew = () => go('jobnew', {});
+ACT.mJobNew = () => sheet({ title:'Create New Job Card', sub:'Choose the type of job card you want to create', body: () => `<div class="jtypes">${[['Vehicle','van','Vehicle Job Card','Standard vehicle job sheet'],['Plant','digger','Plant Job Card','Excavators, loaders, heavy machinery'],['Tyre','tyre','Tyre Job Card','Tyre service job sheet']]
+  .map(([k, ic, t, s]) => `<button data-a="mJobType" data-v="${k}"><span class="jti">${I(ic)}</span><span class="qt"><b>${t}</b><small>${s}</small></span><span class="chev">›</span></button>`).join('')}</div>`,
+  foot: () => `<button class="txtbtn" data-a="mClose">Cancel</button>` });
+ACT.mJobType = d => go('jobnew', { t:d.v });
 function vJob(){
   const j = S.jobs.find(x => x.id === M.p.id), e = me(), fit = e.role === 'Fitter';
   return { title:j.id, back:true, body:`
@@ -1390,28 +1573,57 @@ function tyreDiagram(kind, sel){
   return `<div class="tyre"><span class="lab">Front</span>${Array.from({ length:axles }, (_, i) => `<button class="${sel === (i + 1) + 'L' ? 'on' : ''}" data-a="mTyre" data-v="${i + 1}L">${i + 1}L</button><span class="axle"></span><button class="${sel === (i + 1) + 'R' ? 'on' : ''}" data-a="mTyre" data-v="${i + 1}R">${i + 1}R</button>`).join('')}<span class="lab">Rear</span></div>`;
 }
 ACT.mTyre = d => { M.d.pos = d.v; renderM(); };
+const JOB_KINDS = ['Service','Repair','Breakdown','Defect','Inspection','Tyre change'];
+const nextJobId = () => 'JC-' + (1043 + S.jobs.filter(x => +x.id.slice(3) >= 1043).length);
 function vJobNew(){
-  if (!M.d.type) { const c = openClock(M.user); if (c && c.job === 'Driver' && c.asset) { M.d.type = 'Vehicle'; M.d.asset = c.asset; } else if (c && c.job === OPLAB && c.asset) { M.d.asset = c.asset; } }
-  const t = M.d.type || 'Plant'; const assets = t === 'Plant' ? S.plant.map(p => [p.id, `${p.no} · ${p.make}`]) : S.vehicles.map(v => [v.id, `${v.reg} · ${v.make}`]);
-  if (!assets.find(a => a[0] === M.d.asset)) M.d.asset = assets[0][0];
+  if (!M.d.type) { const c = openClock(M.user); M.d.type = M.p.t || (c && c.job === OPLAB ? 'Plant' : 'Vehicle'); if (c && c.asset) M.d.asset = c.asset; if (M.d.type === 'Tyre') M.d.jtype = 'Tyre change'; }
+  const t = M.d.type, step = M.d.step || 'details', isPlant = t === 'Plant', noun = isPlant ? 'Machine' : 'Truck';
+  const assets = isPlant ? S.plant.map(p => [p.id, `${p.no} · ${p.make}`]) : S.vehicles.filter(inFleet).map(v => [v.id, `${v.reg} · ${v.make}`]);
+  if (M.d.asset && !assets.find(a => a[0] === M.d.asset)) M.d.asset = '';
   const v = veh(M.d.asset);
-  return { title:'New job card', back:true, body:`
-    <div class="seg">${['Plant','Vehicle','Tyre'].map(x => `<button data-a="mDSeg" data-k="type" data-v="${x}" class="${t === x ? 'on' : ''}">${{Plant:I('digger'),Vehicle:I('van'),Tyre:I('tyre')}[x]} ${x}</button>`).join('')}</div>
-    <label class="fld"><span>${t === 'Plant' ? 'Machine' : 'Vehicle'}</span><select data-m="asset" data-rr="1">${assets.map(([id, l]) => `<option value="${id}" ${id === M.d.asset ? 'selected' : ''}>${esc(l)}</option>`).join('')}</select></label>
-    ${t === 'Tyre' ? `<div class="fld"><span>Which tyre?</span>${tyreDiagram(v?.kind, M.d.pos)}</div>
-      <div class="seg">${['Worn','Puncture','Damage','Pressure'].map(x => `<button data-a="mDSeg" data-k="reason" data-v="${x}" class="${(M.d.reason || 'Worn') === x ? 'on' : ''}">${x}</button>`).join('')}</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><label class="fld"><span>Tyre size</span><input data-m="size" value="${esc(M.d.size ?? (v?.kind === 'hgv' ? '315/80 R22.5' : '215/65 R16'))}"></label><label class="fld"><span>Tread depth (mm)</span><input type="number" data-m="tread" value="${esc(M.d.tread || '')}"></label></div>` : ''}
-    <label class="fld"><span>What's the problem?</span><input data-m="title" value="${esc(M.d.title || '')}" placeholder="${t === 'Tyre' ? 'e.g. Slow puncture' : 'e.g. Bucket pin worn'}"></label>
-    <label class="fld"><span>More detail</span><textarea data-m="desc">${esc(M.d.desc || '')}</textarea></label>
-    <div class="fld"><span>Priority</span><div class="seg">${['Low','Medium','High'].map(x => `<button data-a="mDSeg" data-k="pri" data-v="${x}" class="${(M.d.pri || 'Medium') === x ? 'on' : ''}">${x}</button>`).join('')}</div></div>
-    <div class="sec mt0">Photos</div>${photoRow('photos')}
-    <div style="height:14px"></div><button class="mbtn hv" data-a="mJobCreate">Raise job card</button>` };
+  const band = `<div class="stepband"><div class="steps">${[['details','Details'],['time','Time'],['confirm','Confirm']].map(([k, l]) => `<button class="${step === k ? 'on' : ''}" data-a="mJStep" data-v="${k}">${l}</button>`).join('')}</div></div>`;
+  let body = '';
+  if (step === 'details') body = `<div class="card pad jform"><div class="flab2">Job details · ${t} job card</div>
+    <label class="fld cap"><span>Job No.</span><input value="${nextJobId()}" readonly></label>
+    <label class="fld cap"><span>${noun}</span><select class="bigsel" data-m="asset" data-rr="1"><option value="">Select ${noun}</option>${assets.map(([id, l]) => `<option value="${id}" ${id === M.d.asset ? 'selected' : ''}>${esc(l)}</option>`).join('')}</select></label>
+    <label class="fld cap"><span>Job Type</span><select class="bigsel" data-m="jtype"><option value="">Select JobType</option>${JOB_KINDS.map(k => `<option ${k === M.d.jtype ? 'selected' : ''}>${k}</option>`).join('')}</select></label>
+    <label class="fld cap"><span>${isPlant ? 'Hours' : 'Mileage'}</span><input type="number" data-m="miles" value="${esc(M.d.miles || '')}" placeholder="Enter ${isPlant ? 'Hours' : 'Mileage'}"></label>
+    ${t === 'Tyre' ? `<div class="fld cap"><span>Which tyre?</span>${tyreDiagram(v?.kind, M.d.pos)}</div>` : ''}
+    ${isPlant ? '' : `<label class="fld cap"><span>Tyre Size Replaced</span><input data-m="size" value="${esc(M.d.size || '')}" placeholder="Enter Tyre Size Replaced"></label>`}
+    <label class="fld cap"><span>Work Carried Out</span><textarea data-m="desc" placeholder="Describe work carried out...">${esc(M.d.desc || '')}</textarea></label></div>
+    <div class="padb"></div><button class="subbar" data-a="mJStep" data-v="time">Time →</button>`;
+  if (step === 'time') { M.d.t0 = M.d.t0 || Date.now(); const parts = M.d.parts || [];
+    body = `<div class="card pad tcard"><span class="jprog">Job in progress</span><div class="jtimer" id="jtimer">${hms(Date.now() - M.d.t0)}</div></div>
+    <div class="parts"><div class="ph2"><b>Parts Used</b><button data-a="mPartAdd">+ Add Part</button></div>
+      ${parts.length ? `<div class="plist">${parts.map((p, i) => `<div><span>${esc(p.d)}</span><b>× ${p.q}</b><button data-a="mPartDel" data-i="${i}" aria-label="Remove part">${I('x')}</button></div>`).join('')}</div>`
+        : M.d.noParts ? `<div class="pnone">${I('check')} No parts used on this job</div>` : `<div class="pempty">${I('cog')}<b>No parts added yet</b><small>Tap "Add Part" to get started</small></div>`}
+      ${parts.length ? '' : `<button class="mbtn" data-a="mNoParts">${M.d.noParts ? 'Parts were used' : 'No Parts'}</button>`}
+      <div style="margin-top:14px">${photo6('photos')}</div></div>
+    <div class="padb"></div><button class="subbar" data-a="mJStep" data-v="confirm">Review & Create →</button>`; }
+  if (step === 'confirm') { const rows = [['Job No.', nextJobId()], ['Job Card', t], [noun, M.d.asset ? assetLabel(M.d.asset) : '—'], ['Job Type', M.d.jtype || '—'], ['Start Time', M.d.t0 ? fTs(new Date(M.d.t0)) : '—'], [isPlant ? 'Hours' : 'Mileage', M.d.miles || '—'],
+      ...(isPlant ? [] : [['Tyre Size', M.d.size || '—']]), ...(t === 'Tyre' ? [['Tyre position', M.d.pos || '—']] : []), ['Parts', (M.d.parts || []).length ? M.d.parts.map(p => `${p.d} × ${p.q}`).join(', ') : M.d.noParts ? 'None' : '—']];
+    body = `<div class="card pad sum"><div class="flab2">Summary</div>${rows.map(([k, x]) => `<div class="sr"><span>${k}</span><b>${esc(x)}</b></div>`).join('')}<div class="sr"><span>Status</span><b class="gtxt">${isFitter() ? 'in progress' : 'open'}</b></div></div>
+    <div class="card pad sum"><div class="flab2">Work carried out</div><p>${esc(M.d.desc || 'No details provided')}</p></div>
+    <button class="mbtn" data-a="mJobCreate">Submit Job</button><button class="mbtn white" data-a="mJStep" data-v="details" style="margin-top:10px">Edit Details</button>`; }
+  return { title:step === 'confirm' ? 'Confirm & Send' : 'New Job Card', back:true, body:band + body };
 }
+const isFitter = () => me().role === 'Fitter' || (openClock(M.user) || {}).job === 'Mechanic';
+ACT.mJStep = d => {
+  if (d.v !== 'details' && (!M.d.asset || !M.d.jtype)) { M.d.step = 'details'; renderM(true); return mtoast(`Pick the ${M.d.type === 'Plant' ? 'machine' : 'truck'} and job type first`); }
+  if (d.v !== 'details' && M.d.type === 'Tyre' && !M.d.pos) return mtoast('Tap the tyre on the diagram');
+  M.d.step = d.v; renderM(true);
+};
+ACT.mPartAdd = () => sheet({ title:'Add Part', s:{ q:'1' }, body: () => `<label class="fld"><span>Part</span><input data-ms="d" placeholder="e.g. Hydraulic hose 1/2&quot;"></label><label class="fld"><span>Quantity</span><input type="number" data-ms="q" value="1" min="1"></label>`,
+  foot: () => `<div class="btn2"><button class="mbtn grey" data-a="mClose">Cancel</button><button class="mbtn" data-a="mPartSave">Add Part</button></div>` });
+ACT.mPartSave = () => { const p = (M.s.d || '').trim(); if (!p) return mtoast('Name the part'); const q = Math.max(1, +M.s.q || 1); closeSheet(); (M.d.parts = M.d.parts || []).push({ d:p, q, c:0 }); M.d.noParts = false; renderM(); };
+ACT.mPartDel = d => { M.d.parts.splice(+d.i, 1); renderM(); };
+ACT.mNoParts = () => { M.d.noParts = !M.d.noParts; renderM(); };
 ACT.mJobCreate = () => {
-  const t = M.d.type || 'Plant'; if (!M.d.title) return mtoast('Say what the problem is');
-  if (t === 'Tyre' && !M.d.pos) return mtoast('Tap the tyre on the diagram');
-  const j = raiseJob({ type:t, asset:M.d.asset, title:M.d.title, desc:M.d.desc || '', pri:M.d.pri || 'Medium', photo:(M.d.photos || [])[0],
-    tyre: t === 'Tyre' ? { pos:M.d.pos, size:M.d.size, reason:M.d.reason || 'Worn', tread:M.d.tread } : undefined });
+  const t = M.d.type; if (!M.d.asset || !M.d.jtype) { M.d.step = 'details'; renderM(true); return mtoast('Pick the asset and job type'); }
+  const fit = isFitter(), hrsW = M.d.t0 ? Math.round((Date.now() - M.d.t0) / 360000) / 10 : 0;
+  const j = raiseJob({ type:t, asset:M.d.asset, jtype:M.d.jtype, title:`${M.d.jtype}${M.d.desc ? ': ' + M.d.desc.slice(0, 60) : ''}`, desc:M.d.desc || '', pri:M.d.jtype === 'Breakdown' ? 'High' : 'Medium',
+    photo:(M.d.photos || [])[0], parts:M.d.parts || [], hours:hrsW, miles:M.d.miles, fitter:fit ? M.user : null, status:fit ? 'In progress' : 'Open',
+    tyre:t === 'Tyre' ? { pos:M.d.pos, size:M.d.size, reason:M.d.jtype, tread:'' } : undefined });
   log(me().name, `raised ${j.id}`); back(); mtoast(`${j.id} sent to the workshop`);
 };
 
@@ -1769,26 +1981,34 @@ ACT.mMove = d => { const p = plantOf(d.id); if (M.s.to === p.project) return mto
 // ── Me ─────────────────────────────────────────────────────────────────────
 function vMe(){
   const e = me();
+  const slug = e.name.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z ]/g, '').trim().split(/\s+/).join('.');
+  M.d.pf = M.d.pf || { name:e.name, email:e.email || slug + '@mccormickcontracts.ie', dob:e.dob || '', phone:e.phone || '', addr:e.addr || '', pps:e.pps || '' };
+  const f = M.d.pf, star = ['name','email'];
+  const fld = (k, l, type = 'text', ph = '') => `<label class="fld"><span>${l}${star.includes(k) ? ' *' : ''}</span>${type === 'area' ? `<textarea data-pf="${k}" placeholder="${ph}">${esc(f[k])}</textarea>` : `<input type="${type}" data-pf="${k}" value="${esc(f[k])}" placeholder="${ph}">`}</label>`;
+  const fileF = (i, side, label) => { const c = e.certs[i], fn = (c.files || {})[side]; return `<div class="fld"><span>${label}</span><label class="filef"><span class="fb">Choose file</span><span class="fn">${fn ? esc(fn) : 'No file chosen'}</span><input type="file" hidden data-cfile="${i}" data-side="${side}"></label></div>`; };
   const wk = S.clocks.filter(c => c.emp === e.id && daysTo(c.in) > -7).sort((a, b) => b.in - a.in);
   const tot = sum(wk, c => Math.max(0, hrs((c.out || nowD()) - c.in) - (c.out ? (c.brk ?? 30) / 60 : 0)));
-  return { title:'My profile', tab:'me', body:`
-    <div class="card pad" style="display:flex;gap:12px;align-items:center"><span class="av" style="width:48px;height:48px;font-size:17px">${initials(e.name)}</span><div><b style="font-size:16px">${esc(e.name)}</b><div class="muted" style="font-size:13px">${esc(e.role)} · ${esc(e.phone)}</div></div></div>
-    <div class="sec">My certificates</div><div class="rows">${e.certs.map(c => { const s = certState(c); return `<div class="row"><span class="ricon"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="rmain"><b>${esc(c.t)}</b><small>Expires ${fDY(c.exp)}</small></span>${bdg(s[0], s[1])}</div>`; }).join('') || '<div class="empty">None uploaded</div>'}
-      <label class="row" style="cursor:pointer"><span class="ricon"><svg class="i" aria-hidden="true"><use href="#i-camera"/></svg></span><span class="rmain"><b>Upload a renewed card</b><small>The office checks it and updates the expiry</small></span><input type="file" accept="image/*" hidden data-photo="cert"></label></div>
-    <div class="sec">Video induction · ${indPct(e)}%</div>${videoCards(e)}
-    <div class="sec">My hours · last 7 days · ${fH(tot)}</div><div class="rows">${wk.map(c => `<div class="row"><span class="rmain"><b>${fD(c.in)} · ${fT(c.in)}–${c.out ? fT(c.out) : 'now'}</b><small>${esc(proj(c.project).code === 'YARD' ? 'Yard' : proj(c.project).name)}</small></span>${c.inGeo.inFence ? I('pin','ok') : I('alert','bad')}</div>`).join('') || '<div class="empty">No hours yet.</div>'}</div>
-    <div style="height:16px"></div><div class="btnrow"><button class="mbtn ghost" data-a="mSignOut">Sign out</button><button class="mbtn ghost" data-a="resetDemo">Reset demo data</button></div>` };
+  return { title:'Profile', back:true, body:`
+    <div class="pcardm"><h3>Employee Record</h3>${fld('name','Name')}${fld('email','Email','email')}${fld('dob','Date of Birth','date')}${fld('phone','Mobile','tel','Enter mobile number')}${fld('addr','Address','area','Enter address')}${fld('pps','PPSN','text','Enter PPS number')}
+      <button class="mbtn" data-a="mProfSave" style="margin:4px 0 12px">Save changes</button></div>
+    ${e.certs.map((c, i) => { const s = certState(c), lic = /licence/i.test(c.t);
+      return `<div class="pcardm"><h3>${esc(c.t)} ${bdg(s[0], s[1])}</h3>${fileF(i, 'doc', `${esc(c.t)} Document`)}
+        <label class="fld"><span>Expiry Date *</span><input type="date" data-cexp="${i}" value="${isoDate(c.exp)}"></label>
+        ${lic ? fileF(i, 'front', 'Upload Front of Licence *') + fileF(i, 'back', 'Upload Back of Licence *') : ''}</div>`; }).join('')}
+    <div class="pcardm"><h3>My hours · last 7 days <span class="muted" style="font-size:14px;font-weight:600">${fH(tot)}</span></h3><div class="rows flat">${wk.map(c => `<div class="row"><span class="rmain"><b>${fD(c.in)} · ${fT(c.in)}–${c.out ? fT(c.out) : 'now'}</b><small>${esc(clkJob(c))}${c.free ? '' : ' · ' + esc(pcode(c.project))}</small></span>${c.inGeo.inFence ? I('pin','ok') : I('alert','bad')}</div>`).join('') || '<div class="empty">No hours yet.</div>'}</div></div>
+    <div class="btn2"><button class="mbtn white" data-a="mSignOut">Sign out</button><button class="mbtn white" data-a="resetDemo">Reset demo data</button></div>` };
 }
+ACT.mProfSave = () => { const e = me(), f = M.d.pf; if (!f.name.trim() || !f.email.trim()) return mtoast('Name and email are required');
+  Object.assign(e, { name:f.name.trim(), email:f.email.trim(), dob:f.dob, phone:f.phone, addr:f.addr, pps:f.pps }); log(e.name, 'updated their employee record'); renderM(); mtoast('Profile saved – the office can see the changes'); };
 ACT.mSignOut = () => { M.user = null; M.stack = []; clearInterval(vTimer); M.playing = null; renderM(true); };
 
 // ── Router & render ────────────────────────────────────────────────────────
 const VIEWS = { home:vHome, walks:vWalks, walk:vWalk, ga2s:vGa2s, ga2pick:vGa2s, ga2:vGa2, jobs:vJobs, job:vJob, jobnew:vJobNew, projects:vProjects, project:vProject, pdocs:vPDocs,
   dayworks:vDayworks, dw:vDw, dwnew:vDwNew, loads:vLoads, loadnew:vLoadNew, hs:vHs, incident:vIncident, talks:vTalks, talk:vTalk, talknew:vTalkNew, locator:vLocator, me:vMe };
-const TAB_ALL = { home:['home',I('home'),'Home'], jobs:['jobs',I('wrench'),'Jobs'], projects:['projects',I('site'),'Projects'], loads:['loads',I('tipper'),'Loads'], hs:['hs',I('shield'),'Safety'], me:['me',I('user'),'Me'] };
-// Safety is in every tab bar, whatever the job.
-const tabsFor = () => { const e = M.user && me(), c = e && openClock(e.id), j = c && c.job;
-  const mid = j === 'Driver' ? ['loads'] : j === 'Mechanic' ? ['jobs'] : j === OPLAB ? ['projects'] : [];
-  return ['home', ...mid, 'hs', 'me'].map(k => TAB_ALL[k]); };
+// Standard tab bar: Checklist / Home / Profile. Checklist opens the vehicle or plant list for the job picked at clock-in.
+const chkTab = () => { const e = me(), c = openClock(e.id), j = c ? c.job : defJob(e); return j === 'Driver' ? 'walks' : 'ga2s'; };
+const tabsFor = () => [['chk', I('van'), 'Checklist'], ['home', I('grid'), 'Home'], ['me', I('user'), 'Profile']];
+const tabOf = view => ['walks','walk','ga2s','ga2','ga2pick'].includes(view) ? 'chk' : view === 'me' ? 'me' : 'home';
 function renderM(top){
   const root = $('#m-root'); if (!root) return;
   const sc = $('.mscroll', root), keep = !top && sc ? sc.scrollTop : 0;
@@ -1797,13 +2017,12 @@ function renderM(top){
   if (!M.user) { root.innerHTML = vLogin(); return; }
   const e = me();
   const v = e.status === 'Onboarding' ? vOnboard() : (VIEWS[M.view] || vHome)();
-  $('#sbar').classList.toggle('dark', !!v.dark);
-  const tabOn = v.tab || (M.stack.length ? (M.stack[0].view) : M.view);
+  const tabOn = tabOf(M.view);
   root.innerHTML = `<div class="app">
-    ${v.title ? `<div class="mtop">${v.back ? `<button class="back" data-a="mBack" aria-label="Back">‹</button>` : ''}<h1>${esc(v.title)}</h1>${v.action ? `<button class="act" data-a="${v.action[1]}">${v.action[0]}</button>` : ''}</div>` : ''}
+    ${v.title ? `<div class="mtop">${v.back ? `<button class="back" data-a="mBack" aria-label="Back">${I('arrowl')}</button>` : '<span></span>'}<h1>${esc(v.title)}</h1>${v.action ? `<button class="act" data-a="${v.action[1]}">${v.action[0]}</button>` : '<span></span>'}</div>` : ''}
     <div class="mscroll">${v.body}${v.foot ? `<div class="btnrow" style="margin-top:16px">${v.foot}</div>` : ''}</div>
     ${v.noTabs ? '' : `<nav class="tabbar">${tabsFor().map(([k, i, l]) => `<button class="${tabOn === k ? 'on' : ''}" data-a="mTab" data-v="${k}"><span>${i}</span>${l}</button>`).join('')}</nav>`}
-    ${M.sheet ? `<div class="sheet-bg" data-a="sheetBg"><div class="sheet ${M.sheet.full ? 'full' : ''}"><div class="shd"><h3>${esc(M.sheet.title)}</h3><button data-a="mClose" aria-label="Close">✕</button></div><div class="sbody">${M.sheet.body()}</div>${M.sheet.foot ? `<div class="sfoot">${M.sheet.foot()}</div>` : ''}</div></div>` : ''}
+    ${M.sheet ? `<div class="sheet-bg" data-a="sheetBg"><div class="sheet ${M.sheet.full ? 'full' : ''} ${M.sheet.center ? 'center' : ''}"><div class="shd"><div class="sht"><h3>${esc(M.sheet.title)}</h3>${M.sheet.sub ? `<small>${esc(M.sheet.sub)}</small>` : ''}</div><button data-a="mClose" aria-label="Close">${I('x')}</button></div>${M.sheet.sub ? '<i class="shline"></i>' : ''}<div class="sbody">${M.sheet.body()}</div>${M.sheet.foot ? `<div class="sfoot">${M.sheet.foot()}</div>` : ''}</div></div>` : ''}
   </div>`;
   const nsc = $('.mscroll', root); if (nsc) nsc.scrollTop = keep;
   const nss = $('.sheet .sbody', root); if (nss) nss.scrollTop = skeep;
@@ -2565,6 +2784,8 @@ document.addEventListener('input', ev => {
   if (ds.note !== undefined) (M.d.notes = M.d.notes || {})[ds.note] = val;
   if (ds.lab !== undefined) M.d.lab[ds.lab] = val;
   if (ds.pl !== undefined) M.d.pl[ds.pl] = val;
+  if (ds.pf !== undefined) M.d.pf[ds.pf] = val;
+  if (ds.cexp !== undefined && val) me().certs[+ds.cexp].exp = fromIso(val);
   if (ds.f !== undefined) { A.d[ds.f] = val; if (ds.rr) renderA(); }
   if (ds.flt !== undefined) { A.f[ds.flt] = val; renderA(); if (t.type === 'search' || t.type === 'text') { const n = $(`[data-flt="${ds.flt}"]`); if (n) { n.focus(); n.setSelectionRange(n.value.length, n.value.length); } } }
 });
@@ -2579,6 +2800,7 @@ document.addEventListener('change', ev => {
   const f = t.files[0], ds = t.dataset;
   if (ds.ffile) { A.d[ds.ffile] = f.name; if (ds.on && ON[ds.on]) ON[ds.on](t); return; }
   if (ds.photo === 'obcert') return readPhoto(f, src => { (M.d.certs = M.d.certs || []).push({ t:ds.t, exp:day(ds.t === 'Safe Pass' ? 1460 : 900), photo:src }); renderM(); });
+  if (ds.cfile) { const c = me().certs[+ds.cfile]; (c.files = c.files || {})[ds.side] = f.name; log(me().name, `uploaded ${c.t} (${ds.side})`); renderM(); mtoast('Uploaded – the office will check it'); return; }
   if (ds.mfile) { M.s[ds.mfile] = f.name; if (!M.s.dname) M.s.dname = f.name.replace(/\.\w+$/, ''); renderM(); return; }
   if (ds.photo === 'projphoto') return readPhoto(f, src => { S.docs.unshift({ id:nid('ph'), project:M.p.id, cat:'photos', type:'Photo', name:'Site photo ' + fT(nowD()), date:TODAY, by:M.user, img:src }); log(me().name, `added a photo to ${proj(M.p.id).code}`); renderM(); mtoast('Photo added'); });
   if (ds.photo === 'cert') return readPhoto(f, () => mtoast('Card sent to the office to check'));
